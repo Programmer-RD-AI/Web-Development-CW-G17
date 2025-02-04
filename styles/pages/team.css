@@ -1,0 +1,39 @@
+sustainable-dev-website
+├── src
+│   ├── assets
+│   │   └── svg
+│   │       └── sitemap.svg
+│   ├── styles
+│   │   ├── main.css
+│   │   └── pages
+│   │       ├── splash.css
+│   │       ├── home.css
+│   │       ├── volunteer.css
+│   │       ├── table.css
+│   │       ├── profile.css
+│   │       ├── feedback.css
+│   │       ├── sitemap.css
+│   │       ├── team.css
+│   │       ├── content.css
+│   │       ├── editor.css
+│   │       └── validation.css
+│   ├── pages
+│   │   ├── index.html
+│   │   ├── home.html
+│   │   ├── volunteer.html
+│   │   ├── table.html
+│   │   ├── profile.html
+│   │   ├── feedback.html
+│   │   ├── sitemap.html
+│   │   ├── team.html
+│   │   ├── content
+│   │   │   ├── student1.html
+│   │   │   ├── student2.html
+│   │   │   ├── student3.html
+│   │   │   └── student4.html
+│   │   ├── editor.html
+│   │   └── validation.html
+│   └── scripts
+│       └── main.js
+├── .gitignore
+└── README.md
