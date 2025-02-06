@@ -1,39 +1,136 @@
-sustainable-dev-website
-├── src
-│   ├── assets
-│   │   └── svg
-│   │       └── sitemap.svg
-│   ├── styles
-│   │   ├── main.css
-│   │   └── pages
-│   │       ├── splash.css
-│   │       ├── home.css
-│   │       ├── volunteer.css
-│   │       ├── table.css
-│   │       ├── profile.css
-│   │       ├── feedback.css
-│   │       ├── sitemap.css
-│   │       ├── team.css
-│   │       ├── content.css
-│   │       ├── editor.css
-│   │       └── validation.css
-│   ├── pages
-│   │   ├── index.html
-│   │   ├── home.html
-│   │   ├── volunteer.html
-│   │   ├── table.html
-│   │   ├── profile.html
-│   │   ├── feedback.html
-│   │   ├── sitemap.html
-│   │   ├── team.html
-│   │   ├── content
-│   │   │   ├── student1.html
-│   │   │   ├── student2.html
-│   │   │   ├── student3.html
-│   │   │   └── student4.html
-│   │   ├── editor.html
-│   │   └── validation.html
-│   └── scripts
-│       └── main.js
-├── .gitignore
-└── README.md
+.volunteer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.programs-section {
+    margin-bottom: 3rem;
+}
+
+.filter-controls {
+    margin-bottom: 1rem;
+}
+
+.filter-controls select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.program-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.action-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background: #34495e;
+}
+
+.ratings-section {
+    margin: 3rem 0;
+}
+
+.rating-summary {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.overall-rating {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.review-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emoji-rating {
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: transform 0.3s;
+}
+
+.emoji-rating:hover {
+    transform: scale(1.2);
+}
+
+.feedback-form textarea {
+    width: 100%;
+    min-height: 100px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.submit-btn {
+    background: #2c3e50;
+    color: white;
+}
+
+.cancel-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}
