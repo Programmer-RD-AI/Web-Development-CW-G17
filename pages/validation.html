@@ -1,39 +1,56 @@
-sustainable-dev-website
-├── src
-│   ├── assets
-│   │   └── svg
-│   │       └── sitemap.svg
-│   ├── styles
-│   │   ├── main.css
-│   │   └── pages
-│   │       ├── splash.css
-│   │       ├── home.css
-│   │       ├── volunteer.css
-│   │       ├── table.css
-│   │       ├── profile.css
-│   │       ├── feedback.css
-│   │       ├── sitemap.css
-│   │       ├── team.css
-│   │       ├── content.css
-│   │       ├── editor.css
-│   │       └── validation.css
-│   ├── pages
-│   │   ├── index.html
-│   │   ├── home.html
-│   │   ├── volunteer.html
-│   │   ├── table.html
-│   │   ├── profile.html
-│   │   ├── feedback.html
-│   │   ├── sitemap.html
-│   │   ├── team.html
-│   │   ├── content
-│   │   │   ├── student1.html
-│   │   │   ├── student2.html
-│   │   │   ├── student3.html
-│   │   │   └── student4.html
-│   │   ├── editor.html
-│   │   └── validation.html
-│   └── scripts
-│       └── main.js
-├── .gitignore
-└── README.md
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Results</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/pages/validation.css" />
+  </head>
+  <body>
+    <div class="validation-container">
+      <h1>Website Validation Results</h1>
+
+      <!-- Student 1 Section -->
+      <section class="student-section">
+        <h2>Student 1 - Pages Validation</h2>
+
+        <div class="validation-entry">
+          <h3>Splash Screen (splash.html)</h3>
+          <div class="validation-results">
+            <h4>HTML Validation</h4>
+            <img
+              src="../assets/images/validation/splash-html.png"
+              alt="Splash page HTML validation"
+            />
+            <h4>CSS Validation</h4>
+            <img
+              src="../assets/images/validation/splash-css.png"
+              alt="Splash page CSS validation"
+            />
+          </div>
+        </div>
+
+        <!-- Repeat structure for other pages -->
+      </section>
+
+      <!-- Student 2 Section -->
+      <section class="student-section">
+        <h2>Student 2 - Pages Validation</h2>
+        <!-- Similar structure for Student 2's pages -->
+      </section>
+
+      <!-- Student 3 Section -->
+      <section class="student-section">
+        <h2>Student 3 - Pages Validation</h2>
+        <!-- Similar structure for Student 3's pages -->
+      </section>
+
+      <!-- Student 4 Section -->
+      <section class="student-section">
+        <h2>Student 4 - Pages Validation</h2>
+        <!-- Similar structure for Student 4's pages -->
+      </section>
+    </div>
+  </body>
+</html>

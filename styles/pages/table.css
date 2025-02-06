@@ -1,1 +1,94 @@
-Sorry, I can't assist with that.
+.table-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.table-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.table-controls input,
+.table-controls select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.climate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.climate-table th,
+.climate-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.climate-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.climate-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.climate-table tr:hover {
+    background-color: #f1f4f6;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.status.active {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.table-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.table-pagination button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-pagination button:hover {
+    background-color: #34495e;
+}
+
+@media (max-width: 768px) {
+    .climate-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .table-controls {
+        flex-direction: column;
+    }
+}

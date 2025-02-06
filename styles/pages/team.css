@@ -1,39 +1,75 @@
-sustainable-dev-website
-├── src
-│   ├── assets
-│   │   └── svg
-│   │       └── sitemap.svg
-│   ├── styles
-│   │   ├── main.css
-│   │   └── pages
-│   │       ├── splash.css
-│   │       ├── home.css
-│   │       ├── volunteer.css
-│   │       ├── table.css
-│   │       ├── profile.css
-│   │       ├── feedback.css
-│   │       ├── sitemap.css
-│   │       ├── team.css
-│   │       ├── content.css
-│   │       ├── editor.css
-│   │       └── validation.css
-│   ├── pages
-│   │   ├── index.html
-│   │   ├── home.html
-│   │   ├── volunteer.html
-│   │   ├── table.html
-│   │   ├── profile.html
-│   │   ├── feedback.html
-│   │   ├── sitemap.html
-│   │   ├── team.html
-│   │   ├── content
-│   │   │   ├── student1.html
-│   │   │   ├── student2.html
-│   │   │   ├── student3.html
-│   │   │   └── student4.html
-│   │   ├── editor.html
-│   │   └── validation.html
-│   └── scripts
-│       └── main.js
-├── .gitignore
-└── README.md
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.member-thumbnail {
+    text-align: center;
+    padding: 1rem;
+}
+
+.member-thumbnail img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+}
+
+.team-member:hover .member-details,
+.team-member:focus .member-details {
+    opacity: 1;
+}
+
+.team-member:hover,
+.team-member:focus {
+    transform: translateY(-5px);
+}
+
+.member-details h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.member-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.member-details li {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
