@@ -1,4 +1,4 @@
-/* Home Container */
+/* Main Container */
 .home-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,8 +7,14 @@
 
 /* Hero Section */
 .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: var(--background-light);
+    border-radius: 12px;
 }
 
 .logo-container {
@@ -16,7 +22,7 @@
 }
 
 .logo {
-    max-width: 200px;
+    width: 180px;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -27,18 +33,24 @@
 
 .mission-statement {
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .mission-statement h1 {
     color: var(--text-primary);
     font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sdg-label {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.mission-statement p {
+.mission-text {
     color: var(--text-secondary);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
@@ -50,61 +62,74 @@
 .content-links h2 {
     text-align: center;
     color: var(--text-primary);
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 1rem;
 }
 
-.content-tile {
-    position: relative;
+.content-card {
+    background: white;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.content-tile:hover {
-    transform: translateY(-5px);
+.content-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-.content-tile img {
-    width: 100%;
+.card-image {
     height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.tile-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+.content-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
     padding: 1.5rem;
-    color: white;
+    background: white;
 }
 
-.tile-overlay h3 {
-    margin: 0;
-    font-size: 1.2rem;
+.card-content h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
-.tile-overlay p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .home-container {
         padding: 1rem;
+    }
+
+    .hero-section {
+        padding: 1.5rem;
     }
 
     .mission-statement h1 {
@@ -114,4 +139,16 @@
     .content-grid {
         grid-template-columns: 1fr;
     }
+
+    .card-image {
+        height: 180px;
+    }
+}
+
+/* CSS Variables (to be defined in global.css) */
+:root {
+    --background-light: #f8f9fa;
+    --text-primary: #2c3e50;
+    --text-secondary: #6c757d;
+    --accent-color: #2ecc71;
 }
