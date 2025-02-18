@@ -4,54 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Editor</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/editor.css" />
   </head>
   <body>
-    <header class="editor-header">
-      <h1>Page Editor</h1>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link active">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main class="editor-container">
       <section class="editor-info">
         <h2>Editor Information</h2>
         <div class="info-content">
-          <p>
-            <strong>Name:</strong> <span id="editor-name">[Your Name]</span>
-          </p>
-          <p>
-            <strong>Role:</strong> <span id="editor-role">[Your Role]</span>
-          </p>
+          <div class="info-item">
+            <strong>Name:</strong>
+            <span id="editor-name">[Your Name]</span>
+          </div>
+          <div class="info-item">
+            <strong>Role:</strong>
+            <span id="editor-role">[Your Role]</span>
+          </div>
         </div>
       </section>
 
       <section class="tasks-completed">
         <h2>Completed Tasks/Pages</h2>
-        <ul class="task-list">
-          <li><a href="#" target="_blank">[Page Name 1]</a></li>
-          <li><a href="#" target="_blank">[Page Name 2]</a></li>
-          <li><a href="#" target="_blank">[Page Name 3]</a></li>
-        </ul>
+        <div class="content-grid">
+          <a href="#" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Splash Screen"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Splash Screen</h3>
+              <p>Details about the splash screen implementation</p>
+            </div>
+          </a>
+
+          <a href="#" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Volunteer Page"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Volunteer Page</h3>
+              <p>Details about the volunteer page implementation</p>
+            </div>
+          </a>
+
+          <a href="#" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Content Page 1"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Content Page 1</h3>
+              <p>Details about the content page 1 implementation</p>
+            </div>
+          </a>
+        </div>
       </section>
 
       <section class="technical-description">
         <h2>Technical Implementation Details</h2>
         <div class="implementation-details">
-          <!-- Repeat for each implemented page -->
           <article class="page-details">
-            <h3>[Page Name]</h3>
+            <h3>Splash Screen</h3>
             <div class="tech-content">
               <h4>HTML Implementation</h4>
-              <p>[HTML techniques description]</p>
-
+              <p>
+                Utilized meta tags for responsiveness and proper scaling across
+                devices.
+              </p>
               <h4>CSS Implementation</h4>
-              <p>[CSS techniques description]</p>
-
+              <p>
+                Employed CSS transitions for smooth animations and styled the
+                layout for optimal viewing.
+              </p>
               <h4>Validation</h4>
               <p>
-                <a href="validation.html#page1" target="_blank"
-                  >View Validation Results</a
-                >
+                <a href="validation.html#splash" target="_blank">
+                  View Validation Results
+                </a>
               </p>
             </div>
           </article>
@@ -63,14 +144,20 @@
         <div class="challenge-content">
           <h3>Challenges Faced</h3>
           <ul>
-            <li>[Challenge 1 description]</li>
-            <li>[Challenge 2 description]</li>
+            <li>Ensuring cross-browser compatibility.</li>
+            <li>Optimizing animations for performance.</li>
           </ul>
 
           <h3>Solutions & Lessons</h3>
           <ul>
-            <li>[Solution/Lesson 1]</li>
-            <li>[Solution/Lesson 2]</li>
+            <li>
+              Used a CSS reset to minimize browser inconsistencies and tested on
+              multiple browsers.
+            </li>
+            <li>
+              Optimized animations by using CSS transforms instead of adjusting
+              layout properties.
+            </li>
           </ul>
         </div>
       </section>
@@ -78,14 +165,19 @@
       <section class="accessibility">
         <h2>Accessibility Considerations</h2>
         <div class="accessibility-content">
-          <p>[Accessibility implementation details]</p>
+          <p>
+            Ensured all images have descriptive alt text for screen readers.
+          </p>
         </div>
       </section>
 
       <section class="compliance">
         <h2>Compliance</h2>
         <div class="compliance-content">
-          <p>[Janet regulations compliance details]</p>
+          <p>
+            This page complies with the latest web standards and accessibility
+            guidelines.
+          </p>
         </div>
       </section>
 
@@ -93,15 +185,34 @@
         <h2>References</h2>
         <div class="reference-list">
           <ul>
-            <li><a href="#">[Reference 1]</a></li>
-            <li><a href="#">[Reference 2]</a></li>
+            <li>
+              <a href="https://www.w3.org/standards/webdesign/htmlcss"
+                >W3C Standards</a
+              >
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+            </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <footer class="editor-footer">
-      <p>Last Updated: <span id="last-updated">[Date]</span></p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
