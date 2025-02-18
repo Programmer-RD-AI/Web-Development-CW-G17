@@ -1,154 +1,269 @@
-/feedback.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback Form - Sustainable Development</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/pages/feedback.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/pages/feedback.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <header>
-        <!-- Navigation template will be included here -->
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+            <a href="feedback.html" class="nav-link active">
+              <i class="fas fa-comments"></i>
+              <span>Feedback</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main class="feedback-container">
-        <h1>Share Your Thoughts on Sustainable Development</h1>
+      <section class="feedback-header">
+        <h1>Share Your Thoughts</h1>
+        <p>
+          Your feedback helps us improve our efforts towards sustainable
+          development.
+        </p>
+      </section>
 
-        <form class="feedback-form" action="#" method="post" novalidate>
-            <fieldset class="personal-details">
-                <legend>Personal Information</legend>
-                
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required 
-                           title="Please enter your full name">
-                    <span class="error-message"></span>
-                </div>
+      <form class="feedback-form" action="#" method="post" novalidate>
+        <fieldset class="personal-details">
+          <legend>Personal Information</legend>
 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required
-                           title="Please enter a valid email address">
-                    <span class="error-message"></span>
-                </div>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              title="Please enter your full name"
+            />
+            <span class="error-message"></span>
+          </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" 
-                           pattern="[0-9]{10}"
-                           title="Please enter a 10-digit phone number">
-                    <span class="error-message"></span>
-                </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              title="Please enter a valid email address"
+            />
+            <span class="error-message"></span>
+          </div>
 
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea id="address" name="address" rows="3"></textarea>
-                </div>
-            </fieldset>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              title="Please enter a 10-digit phone number"
+            />
+            <span class="error-message"></span>
+          </div>
 
-            <fieldset class="feedback-details">
-                <legend>Feedback Details</legend>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+          </div>
+        </fieldset>
 
-                <div class="form-group">
-                    <label for="feedback-type">Type of Feedback *</label>
-                    <select id="feedback-type" name="feedback-type" required>
-                        <option value="">Select feedback type</option>
-                        <option value="suggestion">Suggestion</option>
-                        <option value="concern">Concern</option>
-                        <option value="appreciation">Appreciation</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+        <fieldset class="feedback-details">
+          <legend>Feedback Details</legend>
 
-                <div class="form-group">
-                    <label>Areas of Interest (Select multiple)</label>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" name="interests" value="environmental">
-                            Environmental Conservation
-                        </label>
-                        <label>
-                            <input type="checkbox" name="interests" value="social">
-                            Social Equity
-                        </label>
-                        <label>
-                            <input type="checkbox" name="interests" value="economic">
-                            Economic Growth
-                        </label>
-                        <label>
-                            <input type="checkbox" name="interests" value="education">
-                            Sustainability Education
-                        </label>
-                    </div>
-                </div>
+          <div class="form-group">
+            <label for="feedback-type">Type of Feedback *</label>
+            <select id="feedback-type" name="feedback-type" required>
+              <option value="">Select feedback type</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="concern">Concern</option>
+              <option value="appreciation">Appreciation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label>Urgency Level</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="urgency" value="low">
-                            Low Priority
-                        </label>
-                        <label>
-                            <input type="radio" name="urgency" value="medium">
-                            Medium Priority
-                        </label>
-                        <label>
-                            <input type="radio" name="urgency" value="high">
-                            High Priority
-                        </label>
-                    </div>
-                </div>
+          <div class="form-group">
+            <label>Areas of Interest (Select multiple)</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="interests" value="environmental" />
+                Environmental Conservation
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="social" />
+                Social Equity
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="economic" />
+                Economic Growth
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="education" />
+                Sustainability Education
+              </label>
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <label for="feedback-date">Submission Date & Time *</label>
-                    <input type="datetime-local" id="feedback-date" name="feedback-date" required>
-                </div>
+          <div class="form-group">
+            <label>Urgency Level</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="urgency" value="low" />
+                Low Priority
+              </label>
+              <label>
+                <input type="radio" name="urgency" value="medium" />
+                Medium Priority
+              </label>
+              <label>
+                <input type="radio" name="urgency" value="high" />
+                High Priority
+              </label>
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <label for="attachment">Supporting Document</label>
-                    <input type="file" id="attachment" name="attachment"
-                           accept=".pdf,.doc,.docx,.jpg,.png">
-                    <small>Accepted formats: PDF, DOC, DOCX, JPG, PNG (max 5MB)</small>
-                </div>
+          <div class="form-group">
+            <label for="feedback-date">Submission Date & Time *</label>
+            <input
+              type="datetime-local"
+              id="feedback-date"
+              name="feedback-date"
+              required
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="message">Your Feedback Message *</label>
-                    <textarea id="message" name="message" rows="5" 
-                            maxlength="500" required></textarea>
-                    <div class="char-count">500 characters remaining</div>
-                </div>
+          <div class="form-group">
+            <label for="attachment">Supporting Document</label>
+            <input
+              type="file"
+              id="attachment"
+              name="attachment"
+              accept=".pdf,.doc,.docx,.jpg,.png"
+            />
+            <small>Accepted formats: PDF, DOC, DOCX, JPG, PNG (max 5MB)</small>
+          </div>
 
-                <div class="rating-section">
-                    <label>Rate Your Experience</label>
-                    <div class="rating" role="group" aria-label="Rating">
-                        <button type="button" class="star" aria-label="1 star">⭐</button>
-                        <button type="button" class="star" aria-label="2 stars">⭐</button>
-                        <button type="button" class="star" aria-label="3 stars">⭐</button>
-                        <button type="button" class="star" aria-label="4 stars">⭐</button>
-                        <button type="button" class="star" aria-label="5 stars">⭐</button>
-                    </div>
-                </div>
-            </fieldset>
+          <div class="form-group">
+            <label for="message">Your Feedback Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              maxlength="500"
+              required
+            ></textarea>
+            <div class="char-count">500 characters remaining</div>
+          </div>
 
-            <button type="submit" class="submit-btn">Submit Feedback</button>
-        </form>
+          <div class="rating-section">
+            <label>Rate Your Experience</label>
+            <div class="rating" role="group" aria-label="Rating">
+              <button type="button" class="star" aria-label="1 star">⭐</button>
+              <button type="button" class="star" aria-label="2 stars">
+                ⭐
+              </button>
+              <button type="button" class="star" aria-label="3 stars">
+                ⭐
+              </button>
+              <button type="button" class="star" aria-label="4 stars">
+                ⭐
+              </button>
+              <button type="button" class="star" aria-label="5 stars">
+                ⭐
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="submit-btn primary">
+          Submit Feedback
+        </button>
+      </form>
     </main>
 
-    <footer>
-        <!-- Footer template will be included here -->
-        <a href="pageEditor_ST3.html" class="editor-link">Page Editor</a>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST3.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Character counter for feedback message
-        document.getElementById('message').addEventListener('input', function() {
-            const remaining = 500 - this.value.length;
-            document.querySelector('.char-count').textContent = 
-                `${remaining} characters remaining`;
+      // Character counter for feedback message
+      document.getElementById("message").addEventListener("input", function () {
+        const remaining = 500 - this.value.length;
+        document.querySelector(
+          ".char-count"
+        ).textContent = `${remaining} characters remaining`;
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
         });
+      });
     </script>
-</body>
+  </body>
 </html>
