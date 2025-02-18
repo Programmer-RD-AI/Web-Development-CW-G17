@@ -1,51 +1,55 @@
 .feedback-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
 }
 
-.feedback-container h1 {
+.feedback-header {
     text-align: center;
-    color: var(--text-primary);
     margin-bottom: 2rem;
-    font-size: 2rem;
+}
+
+.feedback-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.feedback-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
 }
 
 .feedback-form {
-    background: var(--bg-secondary);
+    background: var(--surface);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
 }
 
 fieldset {
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    transition: border-color 0.3s ease;
-}
-
-fieldset:hover {
-    border-color: var(--primary-color);
 }
 
 legend {
-    color: var(--text-primary);
+    font-size: 1.2rem;
     font-weight: 600;
+    color: var(--text);
     padding: 0 1rem;
-    font-size: 1.1rem;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
-    position: relative;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
+    color: var(--text);
     font-weight: 500;
 }
 
@@ -56,35 +60,43 @@ legend {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 2px solid var(--border-color);
-    border-radius: 6px;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    color: var(--text);
+    background-color: var(--background);
+    transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="datetime-local"]:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(8, 145, 178, 0.2);
 }
 
-.form-group input:invalid,
+.form-group input[type="text"]:invalid,
+.form-group input[type="email"]:invalid,
+.form-group input[type="tel"]:invalid,
+.form-group input[type="datetime-local"]:invalid,
 .form-group select:invalid,
 .form-group textarea:invalid {
-    border-color: var(--error-color);
+    border-color: #dc2626;
 }
 
 .error-message {
-    color: var(--error-color);
+    color: #dc2626;
     font-size: 0.875rem;
     margin-top: 0.25rem;
     display: none;
 }
 
-.form-group input:invalid + .error-message {
+.form-group input:invalid+.error-message {
     display: block;
 }
 
@@ -101,18 +113,18 @@ legend {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: normal;
-    cursor: pointer;
+    color: var(--text-light);
+    font-weight: 500;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    accent-color: var(--primary-color);
+    accent-color: var(--primary);
 }
 
 .char-count {
     font-size: 0.875rem;
-    color: var(--text-secondary);
+    color: var(--text-light);
     margin-top: 0.5rem;
     text-align: right;
 }
@@ -135,6 +147,7 @@ input[type="radio"] {
     cursor: pointer;
     transition: transform 0.2s ease;
     padding: 0;
+    color: #facc15;
 }
 
 .star:hover {
@@ -145,36 +158,38 @@ input[type="radio"] {
     display: block;
     width: 100%;
     padding: 1rem;
-    background: var(--primary-color);
-    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
 }
 
-.submit-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.submit-btn.primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-sm);
 }
 
-.submit-btn:active {
-    transform: translateY(0);
+.submit-btn.primary:hover {
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow);
 }
 
-/* File input styling */
 input[type="file"] {
-    padding: 0.5rem;
-    border: 2px dashed var(--border-color);
-    border-radius: 6px;
+    padding: 0.75rem;
+    border: 1px dashed var(--border);
+    border-radius: 0.5rem;
     width: 100%;
+    background-color: var(--background);
+    color: var(--text-light);
 }
 
 input[type="file"]:hover {
-    border-color: var(--primary-color);
+    border-color: var(--primary);
 }
 
 /* Responsive Design */
@@ -182,6 +197,10 @@ input[type="file"]:hover {
     .feedback-container {
         padding: 1rem;
         margin: 1rem;
+    }
+
+    .feedback-header h1 {
+        font-size: 2rem;
     }
 
     .feedback-form {
@@ -197,19 +216,4 @@ input[type="file"]:hover {
     .star {
         font-size: 1.5rem;
     }
-}
-
-/* Editor Link Styling */
-.editor-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.editor-link:hover {
-    background: var(--primary-dark);
 }

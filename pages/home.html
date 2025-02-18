@@ -4,36 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDG 6: Clean Water and Sanitation - Home</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/home.css" />
   </head>
   <body>
     <header>
-      <!-- Navigation template will be included here -->
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link active">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main class="home-container">
       <section class="hero-section">
-        <div class="logo-container">
-          <img
-            src="https://pixabay.com/get/g81482b7dafcf0a976f0c728603a5f08684f602a2c52eda7f0e2a370442ffc63736a1496109826f3a98b6a504b66bc22f.jpg"
-            alt="Clean Water and Sanitation Initiative Logo - Representing SDG 6"
-            class="logo"
-          />
-        </div>
-        <div class="mission-statement">
-          <h1>Clean Water Initiative</h1>
+        <div class="hero-content">
+          <h1 class="hero-title">Clean Water Initiative</h1>
           <p class="sdg-label">SDG 6: Clean Water and Sanitation</p>
-          <p class="mission-text">
+          <p class="hero-text">
             Ensuring availability and sustainable management of water and
             sanitation for all through innovation, education, and community
-            engagement. Together, we're working towards universal access to safe
-            water and adequate sanitation facilities.
+            engagement.
           </p>
+          <div class="hero-cta">
+            <a href="#explore" class="cta-button primary">Explore Solutions</a>
+            <a href="#learn" class="cta-button secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://pixabay.com/get/g81482b7dafcf0a976f0c728603a5f08684f602a2c52eda7f0e2a370442ffc63736a1496109826f3a98b6a504b66bc22f.jpg"
+            alt="Clean Water and Sanitation Initiative"
+          />
         </div>
       </section>
 
-      <section class="content-links">
+      <section id="explore" class="content-links">
         <h2>Explore Water & Sanitation</h2>
         <div class="content-grid">
           <a href="content_ST1.html" class="content-card">
@@ -41,59 +81,111 @@
               <img
                 src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
                 alt="Water Access Challenges"
+                loading="lazy"
               />
+              <div class="card-overlay">
+                <i class="fas fa-tint"></i>
+              </div>
             </div>
             <div class="card-content">
               <h3>Water Access</h3>
               <p>Understanding global water challenges and solutions</p>
+              <span class="card-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></span>
             </div>
           </a>
 
           <a href="content_ST2.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://pixabay.com/get/g25239c13950d998142b1a74af76cc8d694d9c2ad400207931ccbe2dd40ff1bdbd405c5eb2f199436a9641f2e38986376.jpg"
-                alt="Sanitation Initiatives"
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Sanitation Solutions"
+                loading="lazy"
               />
+              <div class="card-overlay">
+                <i class="fas fa-shower"></i>
+              </div>
             </div>
             <div class="card-content">
               <h3>Sanitation</h3>
-              <p>Improving global sanitation infrastructure</p>
+              <p>Exploring sanitation methods and their impact</p>
+              <span class="card-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></span>
             </div>
           </a>
 
           <a href="content_ST3.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://pixabay.com/get/g080876d5f89079843ddd7b77c7d5b949a2b20dc056a02191d6dd5f834abdc213ee7bceb093538398802ebac16859ce02.jpg"
-                alt="Water Solutions"
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Innovative Solutions"
+                loading="lazy"
               />
+              <div class="card-overlay">
+                <i class="fas fa-lightbulb"></i>
+              </div>
             </div>
             <div class="card-content">
-              <h3>Water Solutions</h3>
-              <p>Innovative approaches to water management</p>
+              <h3>Solutions</h3>
+              <p>Discovering innovative solutions for water purification</p>
+              <span class="card-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></span>
             </div>
           </a>
 
           <a href="content_ST4.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://pixabay.com/get/gdeb65af52468ea24befc11da6bfe59cdabd658332b10632fb6f521f76d9493b374df00ec12b4c1a470b7d18fe8b7c019.jpg"
-                alt="Sustainable Water Future"
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Future Outlook"
+                loading="lazy"
               />
+              <div class="card-overlay">
+                <i class="fas fa-globe"></i>
+              </div>
             </div>
             <div class="card-content">
-              <h3>Sustainable Future</h3>
-              <p>Building water-secure communities</p>
+              <h3>Future</h3>
+              <p>Exploring the future of water and sanitation</p>
+              <span class="card-link"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></span>
             </div>
           </a>
         </div>
       </section>
     </main>
 
-    <footer>
-      <!-- Footer template will be included here -->
-      <a href="pageEditor_ST2.html">Page Editor</a>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

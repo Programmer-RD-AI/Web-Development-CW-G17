@@ -4,57 +4,157 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Climate Action Data Table</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/table.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="table-container">
-      <h1>Climate Action Statistics</h1>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
 
-      <div class="table-controls">
-        <input type="text" id="searchInput" placeholder="Search..." />
-        <select id="filterDropdown">
-          <option value="">Sort by...</option>
-          <option value="name">Name</option>
-          <option value="date">Date</option>
-          <option value="impact">Impact</option>
-        </select>
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="table-container">
+      <section class="table-content">
+        <h1>Climate Action Statistics</h1>
+
+        <div class="table-controls">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <select id="filterDropdown">
+            <option value="">Sort by...</option>
+            <option value="name">Name</option>
+            <option value="date">Date</option>
+            <option value="impact">Impact</option>
+          </select>
+        </div>
+
+        <table class="climate-table">
+          <thead>
+            <tr>
+              <th>Initiative Name</th>
+              <th>Location</th>
+              <th>Impact Level</th>
+              <th>Start Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Solar Power Project</td>
+              <td>California, USA</td>
+              <td>High</td>
+              <td>2024-01-15</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Forest Conservation</td>
+              <td>Amazon, Brazil</td>
+              <td>Critical</td>
+              <td>2023-11-30</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Wind Energy Expansion</td>
+              <td>North Sea, Europe</td>
+              <td>High</td>
+              <td>2024-03-01</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Reforestation Initiative</td>
+              <td>India</td>
+              <td>Significant</td>
+              <td>2023-12-15</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Ocean Cleanup Project</td>
+              <td>Pacific Ocean</td>
+              <td>Critical</td>
+              <td>2024-02-20</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+
+        <div class="table-pagination">
+          <button class="cta-button secondary">Previous</button>
+          <span>Page 1 of 5</span>
+          <button class="cta-button primary">Next</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
       </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
 
-      <table class="climate-table">
-        <thead>
-          <tr>
-            <th>Initiative Name</th>
-            <th>Location</th>
-            <th>Impact Level</th>
-            <th>Start Date</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Solar Power Project</td>
-            <td>California, USA</td>
-            <td>High</td>
-            <td>2024-01-15</td>
-            <td><span class="status active">Active</span></td>
-          </tr>
-          <tr>
-            <td>Forest Conservation</td>
-            <td>Amazon, Brazil</td>
-            <td>Critical</td>
-            <td>2023-11-30</td>
-            <td><span class="status pending">Pending</span></td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-
-      <div class="table-pagination">
-        <button>Previous</button>
-        <span>Page 1 of 5</span>
-        <button>Next</button>
-      </div>
-    </div>
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
