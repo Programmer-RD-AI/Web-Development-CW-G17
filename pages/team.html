@@ -1,88 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/pages/team.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team - Sustainable Development Goals</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/pages/team.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
     <main class="team-container">
+      <section class="team-content">
         <h1>Meet Our Development Team</h1>
         <div class="team-grid">
-            <div class="team-member" tabindex="0">
-                <div class="member-thumbnail">
-                    <img src="../assets/images/member1.jpg" alt="Photo of Team Member 1 - Project Manager">
-                    <div class="member-info">
-                        <h3>John Doe</h3>
-                        <p class="role">Project Manager</p>
-                    </div>
-                </div>
-                <div class="member-details">
-                    <h3>John Doe</h3>
-                    <p><strong>Role:</strong> Project Manager</p>
-                    <p><strong>Contributions:</strong></p>
-                    <ul>
-                        <li>Project Planning & Coordination</li>
-                        <li>Homepage Development</li>
-                        <li>Content Strategy</li>
-                    </ul>
-                    <p class="member-bio">
-                        Led the team through successful project implementation while ensuring quality deliverables.
-                    </p>
-                </div>
+          <div class="team-member" tabindex="0">
+            <div class="member-thumbnail">
+              <img
+                src="../assets/images/member1.jpg"
+                alt="Photo of John Doe - Project Manager"
+              />
+              <div class="member-info">
+                <h3>John Doe</h3>
+                <p class="role">Project Manager</p>
+              </div>
             </div>
+            <div class="member-details">
+              <h3>John Doe</h3>
+              <p><strong>Role:</strong> Project Manager</p>
+              <p><strong>Contributions:</strong></p>
+              <ul>
+                <li>Project Planning & Coordination</li>
+                <li>Homepage Development</li>
+                <li>Content Strategy</li>
+              </ul>
+              <p class="member-bio">
+                Led the team through successful project implementation while
+                ensuring quality deliverables.
+              </p>
+            </div>
+          </div>
 
-            <div class="team-member" tabindex="0">
-                <div class="member-thumbnail">
-                    <img src="../assets/images/member2.jpg" alt="Photo of Team Member 2 - Frontend Developer">
-                    <div class="member-info">
-                        <h3>Jane Smith</h3>
-                        <p class="role">Frontend Developer</p>
-                    </div>
-                </div>
-                <div class="member-details">
-                    <h3>Jane Smith</h3>
-                    <p><strong>Role:</strong> Frontend Developer</p>
-                    <p><strong>Contributions:</strong></p>
-                    <ul>
-                        <li>UI/UX Implementation</li>
-                        <li>Responsive Design</li>
-                        <li>Interactive Features</li>
-                    </ul>
-                    <p class="member-bio">
-                        Specialized in creating responsive and accessible user interfaces.
-                    </p>
-                </div>
+          <div class="team-member" tabindex="0">
+            <div class="member-thumbnail">
+              <img
+                src="../assets/images/member2.jpg"
+                alt="Photo of Jane Smith - Frontend Developer"
+              />
+              <div class="member-info">
+                <h3>Jane Smith</h3>
+                <p class="role">Frontend Developer</p>
+              </div>
             </div>
+            <div class="member-details">
+              <h3>Jane Smith</h3>
+              <p><strong>Role:</strong> Frontend Developer</p>
+              <p><strong>Contributions:</strong></p>
+              <ul>
+                <li>UI/UX Implementation</li>
+                <li>Responsive Design</li>
+                <li>Interactive Features</li>
+              </ul>
+              <p class="member-bio">
+                Specialized in creating responsive and accessible user
+                interfaces.
+              </p>
+            </div>
+          </div>
 
-            <div class="team-member" tabindex="0">
-                <div class="member-thumbnail">
-                    <img src="../assets/images/member3.jpg" alt="Photo of Team Member 3 - Backend Developer">
-                    <div class="member-info">
-                        <h3>Mike Johnson</h3>
-                        <p class="role">Backend Developer</p>
-                    </div>
-                </div>
-                <div class="member-details">
-                    <h3>Mike Johnson</h3>
-                    <p><strong>Role:</strong> Backend Developer</p>
-                    <p><strong>Contributions:</strong></p>
-                    <ul>
-                        <li>Database Design</li>
-                        <li>API Development</li>
-                        <li>Performance Optimization</li>
-                    </ul>
-                    <p class="member-bio">
-                        Focused on building robust backend systems and optimizing performance.
-                    </p>
-                </div>
+          <div class="team-member" tabindex="0">
+            <div class="member-thumbnail">
+              <img
+                src="../assets/images/member3.jpg"
+                alt="Photo of Mike Johnson - Backend Developer"
+              />
+              <div class="member-info">
+                <h3>Mike Johnson</h3>
+                <p class="role">Backend Developer</p>
+              </div>
             </div>
+            <div class="member-details">
+              <h3>Mike Johnson</h3>
+              <p><strong>Role:</strong> Backend Developer</p>
+              <p><strong>Contributions:</strong></p>
+              <ul>
+                <li>Database Design</li>
+                <li>API Development</li>
+                <li>Performance Optimization</li>
+              </ul>
+              <p class="member-bio">
+                Focused on building robust backend systems and optimizing
+                performance.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
     </main>
-    <footer>
-        <a href="editor.html" class="editor-link">Open Page Editor</a>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
 </html>
