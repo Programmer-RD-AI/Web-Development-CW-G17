@@ -6,7 +6,6 @@
     <title>User Profile - Sustainable Development</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/profile.css" />
-    <link rel="stylesheet" href="../styles/pages/home.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -59,116 +58,250 @@
     </header>
 
     <main class="profile-container">
-      <section class="profile-header">
-        <div class="avatar-container">
-          <img
-            src="../assets/images/profile-avatar.jpg"
-            alt="User Profile Picture"
-            class="avatar"
-          />
-        </div>
-        <div class="user-info">
-          <h1>Jane Doe</h1>
-          <p class="role">Sustainability Advocate</p>
-        </div>
-      </section>
-
-      <section class="profile-intro">
-        <h2>About Me</h2>
-        <p>
-          Passionate about creating positive environmental change through
-          sustainable practices and community engagement.
-        </p>
-      </section>
-
-      <section class="skills-section">
-        <h2>Skills & Expertise</h2>
-        <div class="skill-bars">
-          <div class="skill">
-            <label>Environmental Analysis</label>
-            <div class="progress-bar">
-              <div class="progress" style="width: 85%">85%</div>
+      <div class="profile-grid">
+        <!-- Left column - Profile info -->
+        <div class="profile-column">
+          <section class="profile-header">
+            <div class="avatar-container">
+              <img
+                src="../assets/images/profile-avatar.jpg"
+                alt="User Profile Picture"
+                class="avatar"
+              />
+              <div
+                class="status-indicator online"
+                title="Currently Active"
+              ></div>
             </div>
-          </div>
-          <div class="skill">
-            <label>Project Management</label>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%">90%</div>
+            <div class="user-info">
+              <h1>Jane Doe</h1>
+              <p class="role">
+                <i class="fas fa-seedling"></i> Sustainability Advocate
+              </p>
+              <div class="user-badges">
+                <span class="badge" title="Verified Member"
+                  ><i class="fas fa-check-circle"></i
+                ></span>
+                <span class="badge" title="Top Contributor"
+                  ><i class="fas fa-award"></i
+                ></span>
+                <span class="badge" title="Community Leader"
+                  ><i class="fas fa-users"></i
+                ></span>
+              </div>
             </div>
-          </div>
+          </section>
+
+          <section class="profile-intro">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>
+              Passionate about creating positive environmental change through
+              sustainable practices and community engagement. With over 5 years
+              of experience in environmental advocacy and project coordination.
+            </p>
+            <div class="highlights">
+              <div class="highlight-item">
+                <span class="highlight-value">5+</span>
+                <span class="highlight-label">Years Experience</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-value">12</span>
+                <span class="highlight-label">Projects</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-value">320</span>
+                <span class="highlight-label">Volunteer Hours</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="skills-section">
+            <h2><i class="fas fa-chart-bar"></i> Skills & Expertise</h2>
+            <div class="skill-bars">
+              <div class="skill">
+                <div class="skill-header">
+                  <label>Environmental Analysis</label>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%" data-value="85%">
+                    <span class="progress-tooltip">85%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <label>Project Management</label>
+                  <span class="skill-level">Expert</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%" data-value="90%">
+                    <span class="progress-tooltip">90%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <label>Community Engagement</label>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 75%" data-value="75%">
+                    <span class="progress-tooltip">75%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
 
-      <section class="volunteer-section">
-        <h2>Volunteering Activities</h2>
-        <ul class="volunteer-list">
-          <li>
-            <span class="icon">🌱</span>
-            <span>Tree Planting Initiative</span>
-          </li>
-          <li>
-            <span class="icon">🌊</span>
-            <span>Ocean Cleanup</span>
-          </li>
-          <li>
-            <span class="icon">♻️</span>
-            <span>Recycling Program Leader</span>
-          </li>
-        </ul>
-      </section>
+        <!-- Right column - Activities & Contact -->
+        <div class="profile-column">
+          <section class="volunteer-section">
+            <h2>
+              <i class="fas fa-hand-holding-heart"></i> Volunteering Activities
+            </h2>
+            <ul class="volunteer-list">
+              <li>
+                <span class="icon"><i class="fas fa-seedling"></i></span>
+                <div class="volunteer-info">
+                  <h3>Tree Planting Initiative</h3>
+                  <p>Planted over 200 trees in urban areas</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fas fa-water"></i></span>
+                <div class="volunteer-info">
+                  <h3>Ocean Cleanup</h3>
+                  <p>Participated in 5 coastal cleanup campaigns</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fas fa-recycle"></i></span>
+                <div class="volunteer-info">
+                  <h3>Recycling Program</h3>
+                  <p>Lead coordinator for community recycling</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon"><i class="fas fa-faucet"></i></span>
+                <div class="volunteer-info">
+                  <h3>Water Conservation</h3>
+                  <p>Educational workshops for local schools</p>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-      <section class="calendar-section">
-        <h2>Availability Calendar</h2>
-        <table class="availability-calendar">
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Mon</th>
-              <th>Tue</th>
-              <th>Wed</th>
-              <th>Thu</th>
-              <th>Fri</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Morning</td>
-              <td class="available">✓</td>
-              <td>-</td>
-              <td class="available">✓</td>
-              <td>-</td>
-              <td class="available">✓</td>
-            </tr>
-            <tr>
-              <td>Afternoon</td>
-              <td>-</td>
-              <td class="available">✓</td>
-              <td>-</td>
-              <td class="available">✓</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+          <section class="calendar-section">
+            <h2><i class="fas fa-calendar-alt"></i> Availability</h2>
+            <div class="calendar-container">
+              <table class="availability-calendar">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Morning</td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Afternoon</td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Evening</td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td><i class="fas fa-times"></i></td>
+                    <td class="available"><i class="fas fa-check"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
 
-      <section class="contact-section">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="cta-button primary">Send Message</button>
-        </form>
-      </section>
+          <section class="contact-section">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <form class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="Your name"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-heading input-icon"></i>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    placeholder="Message subject"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Write your message here..."
+                ></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="cta-button primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <button type="reset" class="cta-button secondary">
+                  <i class="fas fa-undo"></i> Reset
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -187,14 +320,32 @@
         </div>
       </div>
     </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
         const navLinks = document.querySelector(".nav-links");
 
         mobileMenuBtn.addEventListener("click", () => {
           mobileMenuBtn.classList.toggle("active");
           navLinks.classList.toggle("active");
+        });
+
+        // Form validation visual feedback
+        const formInputs = document.querySelectorAll(
+          ".contact-form input, .contact-form textarea"
+        );
+        formInputs.forEach((input) => {
+          input.addEventListener("blur", function () {
+            if (this.value) {
+              this.classList.add("valid");
+              this.classList.remove("invalid");
+            } else if (this.required) {
+              this.classList.add("invalid");
+              this.classList.remove("valid");
+            }
+          });
         });
       });
     </script>

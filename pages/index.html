@@ -3,37 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sustainable Development Goals</title>
+    <meta
+      name="description"
+      content="SDG 6: Ensuring clean water and sanitation for all through sustainable development initiatives"
+    />
+    <title>SDG 6 - Clean Water and Sanitation</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/splash.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header>
-      <h1>Welcome to the Sustainable Development Goals Project</h1>
-      <nav>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="volunteer.html">Volunteer</a></li>
-          <li><a href="table.html">Table</a></li>
-          <li><a href="profile.html">User Profile</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
-          <li><a href="sitemap.html">Sitemap</a></li>
-          <li><a href="team.html">Team</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>Our Mission</h2>
-        <p>
-          Join us in our efforts to promote the 17 UN Sustainable Development
-          Goals.
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div class="splash-container">
+      <div class="splash-overlay"></div>
+
+      <main id="main-content" class="splash-content">
+        <div class="splash-logo">
+          <i class="fas fa-water"></i>
+          <span class="logo-text">SDG <span class="accent">6</span></span>
+        </div>
+
+        <h1>Clean Water and Sanitation</h1>
+
+        <p class="splash-tagline">
+          Ensuring availability and sustainable management of water and
+          sanitation for all
         </p>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Sustainable Development Goals Project</p>
-    </footer>
-    <script src="../scripts/main.js"></script>
+
+        <div class="team-section">
+          <h2>Developed by Group 17</h2>
+          <ul class="team-members">
+            <li>Student 1 - Project Manager</li>
+            <li>Student 2 - Lead Designer</li>
+            <li>Student 3 - Content Manager</li>
+            <li>Student 4 - Technical Lead</li>
+          </ul>
+        </div>
+
+        <a href="home.html" class="cta-button">
+          Enter Website <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <div class="redirect-notice">
+          <i class="fas fa-hourglass-half"></i>
+          <span
+            >Redirecting to homepage in
+            <span id="countdown">7</span> seconds</span
+          >
+        </div>
+      </main>
+
+      <footer class="splash-footer">
+        <p>&copy; 2025 SDG 6 Initiative. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      // Auto redirect functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        let count = 7;
+        const countdownElement = document.getElementById("countdown");
+
+        const timer = setInterval(() => {
+          count--;
+          countdownElement.textContent = count;
+
+          if (count <= 0) {
+            clearInterval(timer);
+            window.location.href = "home.html";
+          }
+        }, 1000);
+
+        // Allow clicking anywhere to enter site immediately
+        document
+          .querySelector(".splash-container")
+          .addEventListener("click", () => {
+            window.location.href = "home.html";
+          });
+
+        // Prevent immediate redirect when clicking on elements within the container
+        document
+          .querySelector(".splash-content")
+          .addEventListener("click", (e) => {
+            e.stopPropagation();
+          });
+      });
+    </script>
   </body>
 </html>

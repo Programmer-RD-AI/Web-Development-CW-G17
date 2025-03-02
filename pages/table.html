@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Climate Action Data Table</title>
+    <title>Water and Sanitation Initiatives | SDG 6</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/table.css" />
     <link
@@ -59,72 +59,253 @@
 
     <main class="table-container">
       <section class="table-content">
-        <h1>Climate Action Statistics</h1>
+        <div class="table-header">
+          <div class="table-title">
+            <h1><i class="fas fa-table"></i> Water & Sanitation Initiatives</h1>
+            <p>
+              Track global projects contributing to clean water and sanitation
+              goals
+            </p>
+          </div>
+          <div class="table-logo">
+            <i class="fas fa-water logo-icon"></i>
+            <span class="logo-text">SDG <span class="accent">6</span></span>
+          </div>
+        </div>
 
         <div class="table-controls">
-          <input type="text" id="searchInput" placeholder="Search..." />
-          <select id="filterDropdown">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search initiatives..."
+            />
+          </div>
+          <select id="filterDropdown" aria-label="Sort table data">
             <option value="">Sort by...</option>
-            <option value="name">Name</option>
-            <option value="date">Date</option>
-            <option value="impact">Impact</option>
+            <option value="name">Initiative Name</option>
+            <option value="date">Start Date</option>
+            <option value="impact">Impact Level</option>
+            <option value="region">Region</option>
           </select>
         </div>
 
-        <table class="climate-table">
-          <thead>
-            <tr>
-              <th>Initiative Name</th>
-              <th>Location</th>
-              <th>Impact Level</th>
-              <th>Start Date</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Solar Power Project</td>
-              <td>California, USA</td>
-              <td>High</td>
-              <td>2024-01-15</td>
-              <td><span class="status active">Active</span></td>
-            </tr>
-            <tr>
-              <td>Forest Conservation</td>
-              <td>Amazon, Brazil</td>
-              <td>Critical</td>
-              <td>2023-11-30</td>
-              <td><span class="status pending">Pending</span></td>
-            </tr>
-            <tr>
-              <td>Wind Energy Expansion</td>
-              <td>North Sea, Europe</td>
-              <td>High</td>
-              <td>2024-03-01</td>
-              <td><span class="status active">Active</span></td>
-            </tr>
-            <tr>
-              <td>Reforestation Initiative</td>
-              <td>India</td>
-              <td>Significant</td>
-              <td>2023-12-15</td>
-              <td><span class="status active">Active</span></td>
-            </tr>
-            <tr>
-              <td>Ocean Cleanup Project</td>
-              <td>Pacific Ocean</td>
-              <td>Critical</td>
-              <td>2024-02-20</td>
-              <td><span class="status pending">Pending</span></td>
-            </tr>
-            <!-- Add more rows as needed -->
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table
+            class="water-initiatives-table"
+            aria-label="Water and Sanitation Initiatives"
+          >
+            <thead>
+              <tr>
+                <th colspan="2" class="category-header">
+                  <div class="header-content">
+                    <i
+                      class="fas fa-info-circle"
+                      title="Initiative details"
+                    ></i>
+                    <span>Initiative Information</span>
+                  </div>
+                </th>
+                <th colspan="2" class="category-header">
+                  <div class="header-content">
+                    <i
+                      class="fas fa-map-marker-alt"
+                      title="Geographic information"
+                    ></i>
+                    <span>Location</span>
+                  </div>
+                </th>
+                <th colspan="2" class="category-header">
+                  <div class="header-content">
+                    <i class="fas fa-chart-line" title="Project metrics"></i>
+                    <span>Progress</span>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <div
+                    class="header-with-icon"
+                    data-tooltip="Name of the water initiative"
+                  >
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Initiative</span>
+                  </div>
+                </th>
+                <th>
+                  <div
+                    class="header-with-icon"
+                    data-tooltip="Type of water project"
+                  >
+                    <i class="fas fa-tag"></i>
+                    <span>Type</span>
+                  </div>
+                </th>
+                <th>
+                  <div
+                    class="header-with-icon"
+                    data-tooltip="Country or region"
+                  >
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Region</span>
+                  </div>
+                </th>
+                <th>
+                  <div
+                    class="header-with-icon"
+                    data-tooltip="Specific location details"
+                  >
+                    <i class="fas fa-map-pin"></i>
+                    <span>Location</span>
+                  </div>
+                </th>
+                <th>
+                  <div class="header-with-icon" data-tooltip="Project timeline">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Start Date</span>
+                  </div>
+                </th>
+                <th>
+                  <div
+                    class="header-with-icon"
+                    data-tooltip="Current project status"
+                  >
+                    <i class="fas fa-tasks"></i>
+                    <span>Status</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="high-priority">
+                <td>
+                  <a href="#" class="initiative-link">Clean Water Supply</a>
+                </td>
+                <td>
+                  <span class="badge infrastructure">Infrastructure</span>
+                </td>
+                <td>Africa</td>
+                <td>Rural Kenya</td>
+                <td>2024-01-15</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="initiative-link">Sanitation Facilities</a>
+                </td>
+                <td><span class="badge education">Education</span></td>
+                <td>Asia</td>
+                <td>Urban India</td>
+                <td>2023-11-30</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+              <tr class="high-priority">
+                <td>
+                  <a href="#" class="initiative-link">Water Treatment Plant</a>
+                </td>
+                <td>
+                  <span class="badge infrastructure">Infrastructure</span>
+                </td>
+                <td>South America</td>
+                <td>São Paulo, Brazil</td>
+                <td>2024-03-01</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <a href="#" class="initiative-link">Watershed Management</a>
+                </td>
+                <td rowspan="2">
+                  <span class="badge conservation">Conservation</span>
+                </td>
+                <td>North America</td>
+                <td>Colorado River Basin</td>
+                <td>2023-12-15</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td>Europe</td>
+                <td>Danube River Basin</td>
+                <td>2024-01-20</td>
+                <td><span class="status planning">Planning</span></td>
+              </tr>
+              <tr class="high-priority">
+                <td>
+                  <a href="#" class="initiative-link">Rainwater Harvesting</a>
+                </td>
+                <td><span class="badge technology">Technology</span></td>
+                <td>Australia</td>
+                <td>Queensland</td>
+                <td>2024-02-20</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="initiative-link">Hygiene Education</a>
+                </td>
+                <td><span class="badge education">Education</span></td>
+                <td>Africa</td>
+                <td>Urban Ethiopia</td>
+                <td>2023-10-05</td>
+                <td><span class="status completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="initiative-link"
+                    >Water Quality Monitoring</a
+                  >
+                </td>
+                <td><span class="badge technology">Technology</span></td>
+                <td>Asia</td>
+                <td>Mekong Delta, Vietnam</td>
+                <td>2024-04-10</td>
+                <td><span class="status planning">Planning</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6" class="table-summary">
+                  <div class="summary-stats">
+                    <div class="stat-item">
+                      <span class="stat-value">8</span>
+                      <span class="stat-label">Total Initiatives</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">4</span>
+                      <span class="stat-label">Active</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">2</span>
+                      <span class="stat-label">Planning</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">1</span>
+                      <span class="stat-label">Pending</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-value">1</span>
+                      <span class="stat-label">Completed</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
 
         <div class="table-pagination">
-          <button class="cta-button secondary">Previous</button>
-          <span>Page 1 of 5</span>
-          <button class="cta-button primary">Next</button>
+          <button class="pagination-btn" aria-label="Previous page">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="pagination-numbers">
+            <button class="pagination-number active">1</button>
+            <button class="pagination-number">2</button>
+            <button class="pagination-number">3</button>
+          </div>
+          <button class="pagination-btn" aria-label="Next page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       </section>
     </main>
@@ -140,19 +321,48 @@
           <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+            <li><a href="editor.html">Page Editor</a></li>
           </ul>
         </div>
       </div>
     </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
         const navLinks = document.querySelector(".nav-links");
 
         mobileMenuBtn.addEventListener("click", () => {
           mobileMenuBtn.classList.toggle("active");
           navLinks.classList.toggle("active");
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById("searchInput");
+        const tableRows = document.querySelectorAll(
+          ".water-initiatives-table tbody tr"
+        );
+
+        searchInput.addEventListener("input", function () {
+          const searchTerm = this.value.toLowerCase();
+
+          tableRows.forEach((row) => {
+            const text = row.textContent.toLowerCase();
+            const isVisible = text.includes(searchTerm);
+            row.style.display = isVisible ? "" : "none";
+          });
+        });
+
+        // Sort functionality
+        const filterDropdown = document.getElementById("filterDropdown");
+
+        filterDropdown.addEventListener("change", function () {
+          const option = this.value;
+          if (!option) return;
+
+          // Simple implementation - in a real app this would be more sophisticated
+          alert(`Table would be sorted by ${option}`);
         });
       });
     </script>
