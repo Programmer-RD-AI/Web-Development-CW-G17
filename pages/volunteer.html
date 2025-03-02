@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volunteer Opportunities</title>
+    <title>Volunteer Opportunities | SDG 6</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/volunteer.css" />
     <link
@@ -46,6 +46,10 @@
               <i class="fas fa-globe"></i>
               <span>Future</span>
             </a>
+            <a href="volunteer.html" class="nav-link active">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span>Volunteer</span>
+            </a>
           </div>
 
           <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -58,10 +62,29 @@
     </header>
 
     <main class="volunteer-container">
-      <section class="programs-section">
-        <h2>Volunteer Programs</h2>
+      <!-- Hero Section -->
+      <section class="volunteer-hero">
+        <div class="hero-content">
+          <h1>Make a Difference</h1>
+          <p>
+            Join our community of volunteers dedicated to clean water and
+            sanitation initiatives worldwide
+          </p>
+          <a href="#programs" class="cta-button primary"
+            >Explore Opportunities</a
+          >
+        </div>
+      </section>
+
+      <!-- Programs Section -->
+      <section id="programs" class="programs-section">
+        <div class="section-header">
+          <h2><i class="fas fa-hands-helping"></i> Volunteer Programs</h2>
+          <p>Discover how you can contribute to our mission</p>
+        </div>
+
         <div class="filter-controls">
-          <select id="sortDropdown">
+          <select id="sortDropdown" aria-label="Sort programs">
             <option value="">Sort by Most Popular</option>
             <option value="date">Sort by Date</option>
             <option value="rating">Sort by Rating</option>
@@ -70,61 +93,201 @@
 
         <div class="programs-grid">
           <div class="program-card">
-            <img src="../assets/images/program1.jpg" alt="Beach Cleanup" />
-            <h3>Beach Cleanup Initiative</h3>
-            <p>Help preserve our coastal environments</p>
-            <a href="#" class="cta-button primary">Learn More</a>
+            <div class="program-image">
+              <img src="../assets/images/program1.jpg" alt="Beach Cleanup" />
+              <span class="program-badge">Popular</span>
+            </div>
+            <div class="program-content">
+              <h3>Beach Cleanup Initiative</h3>
+              <p>
+                Help preserve our coastal environments and protect marine life
+              </p>
+              <div class="program-meta">
+                <span
+                  ><i class="fas fa-map-marker-alt"></i> Various Locations</span
+                >
+                <span><i class="far fa-calendar-alt"></i> Monthly Events</span>
+              </div>
+              <a href="#" class="cta-button primary">Learn More</a>
+            </div>
           </div>
-          <div class="program-card">
-            <img src="../assets/images/program2.jpg" alt="Tree Planting" />
-            <h3>Tree Planting Campaign</h3>
-            <p>Contribute to reforestation efforts</p>
-            <a href="#" class="cta-button primary">Learn More</a>
-          </div>
-          <div class="program-card">
-            <img src="../assets/images/program3.jpg" alt="Water Filter" />
-            <h3>Water Filter Distribution</h3>
-            <p>Help provide clean water to communities</p>
-            <a href="#" class="cta-button primary">Learn More</a>
-          </div>
-          <!-- Additional program cards -->
-        </div>
-      </section>
 
-      <section class="ratings-section">
-        <div class="rating-summary">
-          <h2>Volunteer Reviews</h2>
-          <div class="overall-rating">
-            <span class="rating-number">9.4/10</span>
-            <p>Exceptional</p>
-            <p>Based on 150 reviews</p>
+          <div class="program-card">
+            <div class="program-image">
+              <img src="../assets/images/program2.jpg" alt="Tree Planting" />
+            </div>
+            <div class="program-content">
+              <h3>Tree Planting Campaign</h3>
+              <p>
+                Contribute to reforestation efforts and improve water retention
+              </p>
+              <div class="program-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Urban Areas</span>
+                <span><i class="far fa-calendar-alt"></i> Seasonal</span>
+              </div>
+              <a href="#" class="cta-button primary">Learn More</a>
+            </div>
           </div>
-        </div>
 
-        <div class="reviews-container">
-          <div class="review-card">
-            <h4>Amazing Experience</h4>
-            <p>Very well organized program with great impact...</p>
-            <a href="#" class="see-more">See More</a>
-            <div class="review-meta">
-              <span>John Doe</span>
-              <span>March 15, 2024</span>
+          <div class="program-card">
+            <div class="program-image">
+              <img src="../assets/images/program3.jpg" alt="Water Filter" />
+              <span class="program-badge">Urgent</span>
+            </div>
+            <div class="program-content">
+              <h3>Water Filter Distribution</h3>
+              <p>Help provide clean water access to communities in need</p>
+              <div class="program-meta">
+                <span><i class="fas fa-map-marker-alt"></i> Global</span>
+                <span><i class="far fa-calendar-alt"></i> Year-round</span>
+              </div>
+              <a href="#" class="cta-button primary">Learn More</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="feedback-section">
-        <h2>Share Your Experience</h2>
-        <div class="rating-input">
-          <span class="emoji-rating">😞</span>
-          <span class="emoji-rating">😐</span>
-          <span class="emoji-rating">🙂</span>
-          <span class="emoji-rating">😊</span>
-          <span class="emoji-rating">😍</span>
+      <!-- Impact Stats -->
+      <section class="impact-section">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-line"></i> Our Impact</h2>
+          <p>Together we're making a difference</p>
         </div>
+
+        <div class="stats-container">
+          <div class="stat-card">
+            <span class="stat-number">5,000+</span>
+            <p>Volunteers Worldwide</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">250+</span>
+            <p>Community Projects</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1M+</span>
+            <p>People Impacted</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="ratings-section">
+        <div class="section-header">
+          <h2><i class="fas fa-star"></i> Volunteer Reviews</h2>
+          <p>Hear from our community members</p>
+        </div>
+
+        <div class="rating-summary">
+          <div class="overall-rating">
+            <span class="rating-number">9.4</span>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="rating-text">Exceptional</p>
+            <p class="rating-count">Based on 150 reviews</p>
+          </div>
+        </div>
+
+        <div class="reviews-container">
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="../assets/images/avatar1.jpg"
+                alt="John Doe"
+                class="reviewer-avatar"
+              />
+              <div class="reviewer-info">
+                <h4>John Doe</h4>
+                <span>March 15, 2024</span>
+              </div>
+              <div class="review-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <h4>Amazing Experience</h4>
+            <p>
+              Very well organized program with great impact. The team was
+              supportive and I learned a lot while contributing to an important
+              cause...
+            </p>
+            <a href="#" class="see-more">See More</a>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img
+                src="../assets/images/avatar2.jpg"
+                alt="Jane Smith"
+                class="reviewer-avatar"
+              />
+              <div class="reviewer-info">
+                <h4>Jane Smith</h4>
+                <span>February 28, 2024</span>
+              </div>
+              <div class="review-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <h4>Life-Changing Community Work</h4>
+            <p>
+              Participating in the water filter distribution program was truly
+              eye-opening. It was wonderful to see the immediate impact...
+            </p>
+            <a href="#" class="see-more">See More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback Section -->
+      <section class="feedback-section">
+        <div class="section-header">
+          <h2><i class="fas fa-comment-alt"></i> Share Your Experience</h2>
+          <p>Tell us about your volunteer journey</p>
+        </div>
+
         <form class="feedback-form">
-          <textarea placeholder="Write your review here..."></textarea>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="rating-input">
+              <span class="emoji-rating" data-rating="1">😞</span>
+              <span class="emoji-rating" data-rating="2">😐</span>
+              <span class="emoji-rating" data-rating="3">🙂</span>
+              <span class="emoji-rating" data-rating="4">😊</span>
+              <span class="emoji-rating" data-rating="5">😍</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback">Your Review</label>
+            <textarea
+              id="feedback"
+              placeholder="Write your review here..."
+              required
+            ></textarea>
+          </div>
+
           <div class="form-buttons">
             <button type="submit" class="cta-button primary">
               Submit Feedback
@@ -146,19 +309,39 @@
           <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+            <li><a href="editor.html">Page Editor</a></li>
           </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
     </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
         const navLinks = document.querySelector(".nav-links");
 
         mobileMenuBtn.addEventListener("click", () => {
           mobileMenuBtn.classList.toggle("active");
           navLinks.classList.toggle("active");
+        });
+
+        // Emoji rating selection
+        const emojiRatings = document.querySelectorAll(".emoji-rating");
+        emojiRatings.forEach((emoji) => {
+          emoji.addEventListener("click", () => {
+            emojiRatings.forEach((e) => e.classList.remove("selected"));
+            emoji.classList.add("selected");
+          });
         });
       });
     </script>

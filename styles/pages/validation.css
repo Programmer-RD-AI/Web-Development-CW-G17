@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
+    position: relative;
 }
 
 .validation-content {
@@ -10,62 +11,288 @@
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
 }
 
-.validation-content h1 {
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
     color: var(--text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
     border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.page-header h1 i {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+.validation-intro {
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.quick-nav {
+    background-color: var(--background);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.quick-nav h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-button {
+    background-color: var(--surface);
+    color: var(--text);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.nav-button i {
+    font-size: 0.9rem;
 }
 
 .student-section {
-    margin: 2rem 0;
-    padding: 1rem;
+    margin: 3rem 0;
+    padding: 1.5rem;
     border: 1px solid var(--border);
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.student-section h2 {
+.student-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-header h2 {
     color: var(--text);
-    margin-bottom: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-header h2 i {
+    color: var(--primary);
+}
+
+.badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+
+.badge.success {
+    background-color: rgba(76, 175, 80, 0.15);
+    color: #2e7d32;
+    border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .validation-entry {
-    margin: 1.5rem 0;
-    padding: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
     background-color: var(--background);
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--primary);
+    transition: transform 0.2s ease;
+}
+
+.validation-entry h3 {
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .validation-results {
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.25rem;
 }
 
-.validation-results h4 {
-    margin: 1rem 0 0.5rem;
-    color: var(--primary);
-}
-
-.validation-results img {
-    max-width: 100%;
-    margin: 1rem 0;
-    border: 1px solid var(--border);
+.validation-card {
+    background-color: var(--surface);
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
+    padding: 1.25rem;
+    transition: transform 0.2s ease;
 }
 
-.validation-results a {
-    display: block;
-    margin-top: 0.5rem;
+.validation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.validation-card h4 {
+    margin: 0 0 1rem;
+    color: var(--text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.validation-card h4 i {
     color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.validation-results a:hover {
-    color: var(--primary-dark);
+.fab.fa-html5 {
+    color: #e44d26;
+}
+
+.fab.fa-css3-alt {
+    color: #264de4;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    margin: 0.75rem 0;
+}
+
+.image-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.image-container img {
+    max-width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay span {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.03);
+}
+
+.validation-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.success-icon {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
@@ -73,7 +300,47 @@
         padding: 1rem;
     }
 
+    .validation-content {
+        padding: 1.5rem;
+    }
+
     .student-section {
-        margin: 1rem 0;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .badge {
+        margin-left: 0;
+    }
+
+    .validation-results {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .quick-nav {
+        padding: 1rem;
+    }
+
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .validation-results {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }

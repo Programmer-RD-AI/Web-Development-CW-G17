@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Editor</title>
+    <title>Page Editor - SDG 6 Project</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/editor.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -19,7 +26,7 @@
           </div>
 
           <div class="nav-links">
-            <a href="home.html" class="nav-link active">
+            <a href="home.html" class="nav-link">
               <i class="fas fa-home"></i>
               <span>Home</span>
             </a>
@@ -50,88 +57,232 @@
       </nav>
     </header>
 
+    <div class="page-banner">
+      <div class="banner-content">
+        <h1>Page Editor</h1>
+        <p>Developer documentation and implementation details</p>
+      </div>
+    </div>
+
     <main class="editor-container">
       <section class="editor-info">
-        <h2>Editor Information</h2>
+        <h2><i class="fas fa-user-edit"></i> Editor Information</h2>
         <div class="info-content">
-          <div class="info-item">
-            <strong>Name:</strong>
-            <span id="editor-name">[Your Name]</span>
-          </div>
-          <div class="info-item">
-            <strong>Role:</strong>
-            <span id="editor-role">[Your Role]</span>
+          <div class="profile-header">
+            <div class="profile-image">
+              <img
+                src="../assets/images/profile-avatar.jpg"
+                alt="Editor profile photo"
+              />
+            </div>
+            <div class="profile-details">
+              <div class="info-item">
+                <strong>Name:</strong>
+                <span id="editor-name">Jane Smith</span>
+              </div>
+              <div class="info-item">
+                <strong>Role:</strong>
+                <span id="editor-role">Frontend Developer</span>
+              </div>
+              <div class="info-item">
+                <strong>Email:</strong>
+                <span>jane.smith@example.com</span>
+              </div>
+              <div class="info-item">
+                <strong>GitHub:</strong>
+                <a href="#" class="social-link"
+                  ><i class="fab fa-github"></i> janesmith</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="tasks-completed">
-        <h2>Completed Tasks/Pages</h2>
+        <h2><i class="fas fa-tasks"></i> Completed Tasks/Pages</h2>
         <div class="content-grid">
-          <a href="#" class="content-card">
+          <a href="index.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://via.placeholder.com/300"
+                src="../assets/images/splash-screen.jpg"
                 alt="Splash Screen"
                 loading="lazy"
               />
+              <div class="card-badge">HTML/CSS</div>
             </div>
             <div class="card-content">
               <h3>Splash Screen</h3>
-              <p>Details about the splash screen implementation</p>
+              <p>
+                Created a welcoming splash screen that introduces users to the
+                SDG 6 project with smooth transitions and responsive design.
+              </p>
+              <div class="card-footer">
+                <span class="date">Completed: Feb 15, 2025</span>
+              </div>
             </div>
           </a>
 
-          <a href="#" class="content-card">
+          <a href="volunteer.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://via.placeholder.com/300"
+                src="../assets/images/volunteer-page.jpg"
                 alt="Volunteer Page"
                 loading="lazy"
               />
+              <div class="card-badge">Responsive</div>
             </div>
             <div class="card-content">
               <h3>Volunteer Page</h3>
-              <p>Details about the volunteer page implementation</p>
+              <p>
+                Designed an interactive volunteer page with filtering options,
+                registration form, and dynamic content loading for
+                opportunities.
+              </p>
+              <div class="card-footer">
+                <span class="date">Completed: Feb 22, 2025</span>
+              </div>
             </div>
           </a>
 
-          <a href="#" class="content-card">
+          <a href="content_ST1.html" class="content-card">
             <div class="card-image">
               <img
-                src="https://via.placeholder.com/300"
-                alt="Content Page 1"
+                src="../assets/images/water-access.jpg"
+                alt="Water Access Content Page"
                 loading="lazy"
               />
+              <div class="card-badge">Content</div>
             </div>
             <div class="card-content">
-              <h3>Content Page 1</h3>
-              <p>Details about the content page 1 implementation</p>
+              <h3>Water Access Page</h3>
+              <p>
+                Developed a comprehensive page showcasing global water access
+                challenges with interactive maps and data visualizations.
+              </p>
+              <div class="card-footer">
+                <span class="date">Completed: Mar 1, 2025</span>
+              </div>
             </div>
           </a>
         </div>
       </section>
 
       <section class="technical-description">
-        <h2>Technical Implementation Details</h2>
+        <h2><i class="fas fa-code"></i> Technical Implementation Details</h2>
         <div class="implementation-details">
-          <article class="page-details">
+          <div class="tabs">
+            <button class="tab-btn active" data-page="splash">
+              Splash Screen
+            </button>
+            <button class="tab-btn" data-page="volunteer">
+              Volunteer Page
+            </button>
+            <button class="tab-btn" data-page="content">Content Page</button>
+          </div>
+
+          <article class="page-details active" id="splash-details">
             <h3>Splash Screen</h3>
             <div class="tech-content">
-              <h4>HTML Implementation</h4>
+              <h4><i class="fab fa-html5"></i> HTML Implementation</h4>
               <p>
-                Utilized meta tags for responsiveness and proper scaling across
-                devices.
+                Utilized semantic HTML5 elements for better accessibility and
+                SEO. Implemented meta tags for responsiveness and proper scaling
+                across devices. Created a clean navigation structure with clear
+                call-to-action elements.
               </p>
-              <h4>CSS Implementation</h4>
+
+              <div class="code-snippet">
+                <pre><code>&lt;header&gt;
+  &lt;h1&gt;Welcome to the Sustainable Development Goals Project&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+
+              <h4><i class="fab fa-css3-alt"></i> CSS Implementation</h4>
               <p>
-                Employed CSS transitions for smooth animations and styled the
-                layout for optimal viewing.
+                Employed CSS transitions for smooth animations. Created a
+                responsive layout using Flexbox and CSS Grid. Used CSS variables
+                for consistent theming and easier maintenance.
               </p>
-              <h4>Validation</h4>
+
+              <h4><i class="fas fa-check-circle"></i> Validation</h4>
               <p>
-                <a href="validation.html#splash" target="_blank">
-                  View Validation Results
+                <a
+                  href="validation.html#splash"
+                  target="_blank"
+                  class="validation-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Validation
+                  Results
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="page-details" id="volunteer-details">
+            <h3>Volunteer Page</h3>
+            <div class="tech-content">
+              <h4><i class="fab fa-html5"></i> HTML Implementation</h4>
+              <p>
+                Created accessible form elements with proper validation
+                attributes. Used semantic sectioning for clear content
+                organization. Implemented card-based layout for volunteer
+                opportunities.
+              </p>
+
+              <h4><i class="fab fa-css3-alt"></i> CSS Implementation</h4>
+              <p>
+                Designed interactive cards with hover effects. Applied CSS Grid
+                for responsive layout across device sizes. Used CSS transitions
+                for smooth filtering animations.
+              </p>
+
+              <h4><i class="fas fa-check-circle"></i> Validation</h4>
+              <p>
+                <a
+                  href="validation.html#volunteer"
+                  target="_blank"
+                  class="validation-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Validation
+                  Results
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <article class="page-details" id="content-details">
+            <h3>Content Page</h3>
+            <div class="tech-content">
+              <h4><i class="fab fa-html5"></i> HTML Implementation</h4>
+              <p>
+                Implemented structured content with proper heading hierarchy.
+                Integrated media elements with appropriate fallbacks. Used
+                figure and figcaption for better image accessibility.
+              </p>
+
+              <h4><i class="fab fa-css3-alt"></i> CSS Implementation</h4>
+              <p>
+                Created responsive layouts for text and media content. Applied
+                modern typography principles for better readability. Implemented
+                progressive enhancement for various device capabilities.
+              </p>
+
+              <h4><i class="fas fa-check-circle"></i> Validation</h4>
+              <p>
+                <a
+                  href="validation.html#content"
+                  target="_blank"
+                  class="validation-link"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Validation
+                  Results
                 </a>
               </p>
             </div>
@@ -140,58 +291,160 @@
       </section>
 
       <section class="challenges">
-        <h2>Challenges & Lessons Learned</h2>
+        <h2><i class="fas fa-mountain"></i> Challenges & Lessons Learned</h2>
         <div class="challenge-content">
-          <h3>Challenges Faced</h3>
-          <ul>
-            <li>Ensuring cross-browser compatibility.</li>
-            <li>Optimizing animations for performance.</li>
-          </ul>
+          <div class="challenge-card">
+            <h3>
+              <i class="fas fa-exclamation-triangle"></i> Challenges Faced
+            </h3>
+            <ul>
+              <li>
+                Ensuring cross-browser compatibility across modern and legacy
+                browsers
+              </li>
+              <li>
+                Optimizing animations and transitions for performance on mobile
+                devices
+              </li>
+              <li>
+                Maintaining accessibility while implementing complex interactive
+                elements
+              </li>
+              <li>
+                Creating a consistent design system across multiple page
+                templates
+              </li>
+            </ul>
+          </div>
 
-          <h3>Solutions & Lessons</h3>
-          <ul>
-            <li>
-              Used a CSS reset to minimize browser inconsistencies and tested on
-              multiple browsers.
-            </li>
-            <li>
-              Optimized animations by using CSS transforms instead of adjusting
-              layout properties.
-            </li>
-          </ul>
+          <div class="challenge-card">
+            <h3><i class="fas fa-lightbulb"></i> Solutions & Lessons</h3>
+            <ul>
+              <li>
+                Used a CSS reset to minimize browser inconsistencies and tested
+                on multiple browsers with feature detection
+              </li>
+              <li>
+                Optimized animations by using CSS transforms instead of
+                adjusting layout properties, and implemented reduced motion
+                media queries
+              </li>
+              <li>
+                Employed ARIA attributes and keyboard navigation support to
+                ensure all interactive elements remained accessible
+              </li>
+              <li>
+                Created a comprehensive design system with variables and
+                reusable components to maintain consistency
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="accessibility">
-        <h2>Accessibility Considerations</h2>
+        <h2>
+          <i class="fas fa-universal-access"></i> Accessibility Considerations
+        </h2>
         <div class="accessibility-content">
-          <p>
-            Ensured all images have descriptive alt text for screen readers.
-          </p>
+          <div class="accessibility-grid">
+            <div class="accessibility-item">
+              <i class="fas fa-image"></i>
+              <h4>Images</h4>
+              <p>
+                All images include descriptive alt text for screen readers and
+                fallback in case images fail to load.
+              </p>
+            </div>
+
+            <div class="accessibility-item">
+              <i class="fas fa-keyboard"></i>
+              <h4>Keyboard Navigation</h4>
+              <p>
+                All interactive elements are accessible via keyboard navigation
+                with visible focus states.
+              </p>
+            </div>
+
+            <div class="accessibility-item">
+              <i class="fas fa-text-height"></i>
+              <h4>Text Readability</h4>
+              <p>
+                Used appropriate color contrast and typography to ensure text
+                remains readable for all users.
+              </p>
+            </div>
+
+            <div class="accessibility-item">
+              <i class="fas fa-mobile-alt"></i>
+              <h4>Responsive Design</h4>
+              <p>
+                Pages adapt to different screen sizes without loss of
+                functionality or content.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="compliance">
-        <h2>Compliance</h2>
+        <h2><i class="fas fa-check-square"></i> Compliance</h2>
         <div class="compliance-content">
+          <div class="compliance-badges">
+            <div class="badge">
+              <i class="fas fa-globe"></i>
+              <span>WCAG 2.1 AA</span>
+            </div>
+            <div class="badge">
+              <i class="fab fa-html5"></i>
+              <span>HTML5 Valid</span>
+            </div>
+            <div class="badge">
+              <i class="fab fa-css3"></i>
+              <span>CSS3 Valid</span>
+            </div>
+          </div>
           <p>
             This page complies with the latest web standards and accessibility
-            guidelines.
+            guidelines, ensuring a seamless experience for all users regardless
+            of their abilities or browsing environment.
           </p>
         </div>
       </section>
 
       <section class="references">
-        <h2>References</h2>
+        <h2><i class="fas fa-book"></i> References</h2>
         <div class="reference-list">
           <ul>
             <li>
-              <a href="https://www.w3.org/standards/webdesign/htmlcss"
-                >W3C Standards</a
+              <i class="fas fa-link"></i>
+              <a
+                href="https://www.w3.org/standards/webdesign/htmlcss"
+                target="_blank"
               >
+                W3C Web Design Standards
+              </a>
             </li>
             <li>
-              <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+              <i class="fas fa-link"></i>
+              <a href="https://developer.mozilla.org/en-US/" target="_blank">
+                MDN Web Docs
+              </a>
+            </li>
+            <li>
+              <i class="fas fa-link"></i>
+              <a
+                href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+                target="_blank"
+              >
+                Web Content Accessibility Guidelines (WCAG)
+              </a>
+            </li>
+            <li>
+              <i class="fas fa-link"></i>
+              <a href="https://sdgs.un.org/goals/goal6" target="_blank">
+                UN Sustainable Development Goal 6
+              </a>
             </li>
           </ul>
         </div>
@@ -214,5 +467,43 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tab functionality for technical details section
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const pageDetails = document.querySelectorAll(".page-details");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons and details
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            pageDetails.forEach((details) =>
+              details.classList.remove("active")
+            );
+
+            // Add active class to clicked button
+            button.classList.add("active");
+
+            // Show corresponding details
+            const pageId = button.getAttribute("data-page");
+            document
+              .getElementById(`${pageId}-details`)
+              .classList.add("active");
+          });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (mobileMenuBtn && navLinks) {
+          mobileMenuBtn.addEventListener("click", () => {
+            mobileMenuBtn.classList.toggle("active");
+            navLinks.classList.toggle("active");
+          });
+        }
+      });
+    </script>
   </body>
 </html>
