@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>User Profile - Sustainable Development</title>
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/pages/profile.css" />
+    <link rel="stylesheet" href="../styles/main.css" >
+    <link rel="stylesheet" href="../styles/pages/profile.css" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    >
   </head>
   <body>
     <header>
@@ -64,10 +64,10 @@
           <section class="profile-header">
             <div class="avatar-container">
               <img
-                src="../assets/images/profile-avatar.jpg"
+                src="../assets/images/smith.jpg"
                 alt="User Profile Picture"
                 class="avatar"
-              />
+              >
               <div
                 class="status-indicator online"
                 title="Currently Active"
@@ -251,7 +251,7 @@
                       name="name"
                       required
                       placeholder="Your name"
-                    />
+                    >
                   </div>
                 </div>
                 <div class="form-group">
@@ -264,7 +264,7 @@
                       name="email"
                       required
                       placeholder="your@email.com"
-                    />
+                    >
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@
                     name="subject"
                     required
                     placeholder="Message subject"
-                  />
+                  >
                 </div>
               </div>
               <div class="form-group">
@@ -320,34 +320,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-        const navLinks = document.querySelector(".nav-links");
-
-        mobileMenuBtn.addEventListener("click", () => {
-          mobileMenuBtn.classList.toggle("active");
-          navLinks.classList.toggle("active");
-        });
-
-        // Form validation visual feedback
-        const formInputs = document.querySelectorAll(
-          ".contact-form input, .contact-form textarea"
-        );
-        formInputs.forEach((input) => {
-          input.addEventListener("blur", function () {
-            if (this.value) {
-              this.classList.add("valid");
-              this.classList.remove("invalid");
-            } else if (this.required) {
-              this.classList.add("invalid");
-              this.classList.remove("valid");
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
