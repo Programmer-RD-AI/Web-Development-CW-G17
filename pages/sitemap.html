@@ -3,49 +3,280 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sitemap - Climate Action Website</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <meta
+      name="description"
+      content="Interactive sitemap for SDG 6 Clean Water and Sanitation website"
+    />
+    <title>Interactive Sitemap - SDG 6 Initiative</title>
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/sitemap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="sitemap-container">
-      <h1>Website Sitemap</h1>
-      <div class="svg-container">
-        <!-- Embed SVG with object to maintain interactivity -->
-        <object
-          data="../assets/svg/sitemap.svg"
-          type="image/svg+xml"
-          id="sitemap-svg"
-        >
-          Your browser does not support SVG
-        </object>
-      </div>
-      <!-- Alternative text navigation for accessibility -->
-      <nav class="text-sitemap" aria-label="Text sitemap navigation">
-        <ul>
-          <li><a href="splash.html">Splash Screen</a></li>
-          <li><a href="home.html">Home</a></li>
-          <li>
-            Main Pages
-            <ul>
-              <li><a href="volunteer.html">Volunteer</a></li>
-              <li><a href="table.html">Table</a></li>
-              <li><a href="profile.html">User Profile</a></li>
-              <li><a href="feedback.html">Feedback</a></li>
-              <li><a href="team.html">Team</a></li>
-            </ul>
-          </li>
-          <li>
-            Content Pages
-            <ul>
-              <li><a href="content_ST1.html">Content ST1</a></li>
-              <li><a href="content_ST2.html">Content ST2</a></li>
-              <li><a href="content_ST3.html">Content ST3</a></li>
-              <li><a href="content_ST4.html">Content ST4</a></li>
-            </ul>
-          </li>
-        </ul>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
-    </div>
+    </header>
+
+    <main id="main-content" class="sitemap-container">
+      <section class="sitemap-header">
+        <h1><i class="fas fa-sitemap"></i> Website Sitemap</h1>
+        <p class="sitemap-intro">
+          This interactive map shows the structure and navigation paths of our
+          SDG 6 website. Explore our content by clicking on any node in the
+          visual map or using the text links below.
+        </p>
+      </section>
+
+      <div class="sitemap-tabs">
+        <button class="tab-btn active" data-target="visual-map">
+          <i class="fas fa-project-diagram"></i> Visual Map
+        </button>
+        <button class="tab-btn" data-target="text-map">
+          <i class="fas fa-list-ul"></i> Text Map
+        </button>
+      </div>
+
+      <section class="sitemap-content tab-content active" id="visual-map">
+        <div class="svg-container">
+          <div class="svg-loading">
+            <i class="fas fa-spinner fa-pulse"></i>
+            <span>Loading sitemap...</span>
+          </div>
+          <object
+            data="../assets/svg/sitemap.svg"
+            type="image/svg+xml"
+            id="sitemap-svg"
+          >
+            <p>
+              Your browser does not support SVG, please use the text sitemap
+              below.
+            </p>
+          </object>
+        </div>
+        <div class="map-legend">
+          <h3>Legend</h3>
+          <ul class="legend-items">
+            <li><span class="legend-box main-page"></span> Main pages</li>
+            <li><span class="legend-box content-page"></span> Content pages</li>
+            <li><span class="legend-box utility-page"></span> Utility pages</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sitemap-content tab-content" id="text-map">
+        <nav class="text-sitemap" aria-label="Text sitemap navigation">
+          <div class="sitemap-grid">
+            <div class="sitemap-column">
+              <h3><i class="fas fa-home"></i> Main Navigation</h3>
+              <ul>
+                <li>
+                  <a href="index.html" class="sitemap-link">
+                    <i class="fas fa-water"></i> Splash Screen</a
+                  >
+                </li>
+                <li>
+                  <a href="home.html" class="sitemap-link">
+                    <i class="fas fa-home"></i> Home Page</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="sitemap-column">
+              <h3><i class="fas fa-file-alt"></i> Main Pages</h3>
+              <ul>
+                <li>
+                  <a href="volunteer.html" class="sitemap-link">
+                    <i class="fas fa-hands-helping"></i> Volunteer</a
+                  >
+                </li>
+                <li>
+                  <a href="table.html" class="sitemap-link">
+                    <i class="fas fa-table"></i> Table</a
+                  >
+                </li>
+                <li>
+                  <a href="profile.html" class="sitemap-link">
+                    <i class="fas fa-user"></i> User Profile</a
+                  >
+                </li>
+                <li>
+                  <a href="feedback.html" class="sitemap-link">
+                    <i class="fas fa-comments"></i> Feedback</a
+                  >
+                </li>
+                <li>
+                  <a href="team.html" class="sitemap-link">
+                    <i class="fas fa-users"></i> Team</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="sitemap-column">
+              <h3><i class="fas fa-book-open"></i> Content Pages</h3>
+              <ul>
+                <li>
+                  <a href="content_ST1.html" class="sitemap-link">
+                    <i class="fas fa-tint"></i> Water Access</a
+                  >
+                </li>
+                <li>
+                  <a href="content_ST2.html" class="sitemap-link">
+                    <i class="fas fa-shower"></i> Sanitation</a
+                  >
+                </li>
+                <li>
+                  <a href="content_ST3.html" class="sitemap-link">
+                    <i class="fas fa-lightbulb"></i> Solutions</a
+                  >
+                </li>
+                <li>
+                  <a href="content_ST4.html" class="sitemap-link">
+                    <i class="fas fa-globe"></i> Future</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="sitemap-column">
+              <h3><i class="fas fa-cogs"></i> Utility Pages</h3>
+              <ul>
+                <li>
+                  <a href="pageEditor_ST1.html" class="sitemap-link">
+                    <i class="fas fa-edit"></i> Editor ST1</a
+                  >
+                </li>
+                <li>
+                  <a href="pageEditor_ST2.html" class="sitemap-link">
+                    <i class="fas fa-edit"></i> Editor ST2</a
+                  >
+                </li>
+                <li>
+                  <a href="pageEditor_ST3.html" class="sitemap-link">
+                    <i class="fas fa-edit"></i> Editor ST3</a
+                  >
+                </li>
+                <li>
+                  <a href="pageEditor_ST4.html" class="sitemap-link">
+                    <i class="fas fa-edit"></i> Editor ST4</a
+                  >
+                </li>
+                <li>
+                  <a href="validation.html" class="sitemap-link">
+                    <i class="fas fa-check-circle"></i> Validation</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST4.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) =>
+              content.classList.remove("active")
+            );
+
+            // Add active class to clicked button
+            button.classList.add("active");
+
+            // Show corresponding content
+            const targetId = button.getAttribute("data-target");
+            document.getElementById(targetId).classList.add("active");
+          });
+        });
+
+        // Hide loading spinner once SVG is loaded
+        const svgObject = document.getElementById("sitemap-svg");
+        if (svgObject) {
+          svgObject.addEventListener("load", function () {
+            document.querySelector(".svg-loading").style.display = "none";
+          });
+        }
+      });
+    </script>
   </body>
 </html>

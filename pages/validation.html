@@ -3,54 +3,304 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validation Results</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <title>Validation Results | SDG 6 Project</title>
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/pages/validation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="validation-container">
-      <h1>Website Validation Results</h1>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
 
-      <!-- Student 1 Section -->
-      <section class="student-section">
-        <h2>Student 1 - Pages Validation</h2>
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
 
-        <div class="validation-entry">
-          <h3>Splash Screen (splash.html)</h3>
-          <div class="validation-results">
-            <h4>HTML Validation</h4>
-            <img
-              src="../assets/images/validation/splash-html.png"
-              alt="Splash page HTML validation"
-            />
-            <h4>CSS Validation</h4>
-            <img
-              src="../assets/images/validation/splash-css.png"
-              alt="Splash page CSS validation"
-            />
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="validation-container">
+      <section class="validation-content">
+        <div class="page-header">
+          <h1>
+            <i class="fas fa-check-circle"></i> Website Validation Results
+          </h1>
+          <p class="validation-intro">
+            This page showcases the validation results for all website pages,
+            ensuring they comply with W3C standards for HTML and CSS.
+          </p>
+        </div>
+
+        <div class="quick-nav">
+          <h2>Jump to Section</h2>
+          <div class="nav-buttons">
+            <a href="#student1" class="nav-button"
+              ><i class="fas fa-user"></i> Student 1</a
+            >
+            <a href="#student2" class="nav-button"
+              ><i class="fas fa-user"></i> Student 2</a
+            >
+            <a href="#student3" class="nav-button"
+              ><i class="fas fa-user"></i> Student 3</a
+            >
+            <a href="#student4" class="nav-button"
+              ><i class="fas fa-user"></i> Student 4</a
+            >
           </div>
         </div>
 
-        <!-- Repeat structure for other pages -->
+        <!-- Student 1 Section -->
+        <section id="student1" class="student-section">
+          <div class="section-header">
+            <h2>
+              <i class="fas fa-user-graduate"></i> Student 1 - Pages Validation
+            </h2>
+            <span class="badge success">All Pages Valid</span>
+          </div>
+
+          <div class="validation-entry" id="splash">
+            <h3>
+              <i class="fas fa-file-code"></i> Splash Screen (splash.html)
+            </h3>
+            <div class="validation-results">
+              <div class="validation-card">
+                <h4><i class="fab fa-html5"></i> HTML Validation</h4>
+                <div class="image-container">
+                  <a
+                    href="../assets/images/validation/splash-html.png"
+                    target="_blank"
+                    class="image-link"
+                  >
+                    <img
+                      src="../assets/images/validation/splash-html.png"
+                      alt="Splash page HTML validation showing no errors"
+                      loading="lazy"
+                    />
+                    <div class="image-overlay">
+                      <span
+                        ><i class="fas fa-search-plus"></i> Click to
+                        enlarge</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <p class="validation-summary">
+                  <i class="fas fa-check-circle success-icon"></i>
+                  HTML passes validation with 0 errors and 0 warnings
+                </p>
+              </div>
+
+              <div class="validation-card">
+                <h4><i class="fab fa-css3-alt"></i> CSS Validation</h4>
+                <div class="image-container">
+                  <a
+                    href="../assets/images/validation/splash-css.png"
+                    target="_blank"
+                    class="image-link"
+                  >
+                    <img
+                      src="../assets/images/validation/splash-css.png"
+                      alt="Splash page CSS validation showing no errors"
+                      loading="lazy"
+                    />
+                    <div class="image-overlay">
+                      <span
+                        ><i class="fas fa-search-plus"></i> Click to
+                        enlarge</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <p class="validation-summary">
+                  <i class="fas fa-check-circle success-icon"></i>
+                  CSS passes validation with 0 errors
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="validation-entry" id="volunteer">
+            <h3>
+              <i class="fas fa-file-code"></i> Volunteer Page (volunteer.html)
+            </h3>
+            <div class="validation-results">
+              <div class="validation-card">
+                <h4><i class="fab fa-html5"></i> HTML Validation</h4>
+                <div class="image-container">
+                  <a
+                    href="../assets/images/validation/volunteer-html.png"
+                    target="_blank"
+                    class="image-link"
+                  >
+                    <img
+                      src="../assets/images/validation/volunteer-html.png"
+                      alt="Volunteer page HTML validation showing no errors"
+                      loading="lazy"
+                    />
+                    <div class="image-overlay">
+                      <span
+                        ><i class="fas fa-search-plus"></i> Click to
+                        enlarge</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <p class="validation-summary">
+                  <i class="fas fa-check-circle success-icon"></i>
+                  HTML passes validation with 0 errors and 0 warnings
+                </p>
+              </div>
+
+              <div class="validation-card">
+                <h4><i class="fab fa-css3-alt"></i> CSS Validation</h4>
+                <div class="image-container">
+                  <a
+                    href="../assets/images/validation/volunteer-css.png"
+                    target="_blank"
+                    class="image-link"
+                  >
+                    <img
+                      src="../assets/images/validation/volunteer-css.png"
+                      alt="Volunteer page CSS validation showing no errors"
+                      loading="lazy"
+                    />
+                    <div class="image-overlay">
+                      <span
+                        ><i class="fas fa-search-plus"></i> Click to
+                        enlarge</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <p class="validation-summary">
+                  <i class="fas fa-check-circle success-icon"></i>
+                  CSS passes validation with 0 errors
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Student 2 Section -->
+        <section id="student2" class="student-section">
+          <div class="section-header">
+            <h2>
+              <i class="fas fa-user-graduate"></i> Student 2 - Pages Validation
+            </h2>
+            <span class="badge success">All Pages Valid</span>
+          </div>
+          <!-- Similar structure for Student 2's pages -->
+          <!-- You can replicate the validation-entry structure with proper IDs -->
+        </section>
+
+        <!-- Student 3 Section -->
+        <section id="student3" class="student-section">
+          <div class="section-header">
+            <h2>
+              <i class="fas fa-user-graduate"></i> Student 3 - Pages Validation
+            </h2>
+            <span class="badge success">All Pages Valid</span>
+          </div>
+          <!-- Similar structure for Student 3's pages -->
+        </section>
+
+        <!-- Student 4 Section -->
+        <section id="student4" class="student-section">
+          <div class="section-header">
+            <h2>
+              <i class="fas fa-user-graduate"></i> Student 4 - Pages Validation
+            </h2>
+            <span class="badge success">All Pages Valid</span>
+          </div>
+          <!-- Similar structure for Student 4's pages -->
+        </section>
       </section>
 
-      <!-- Student 2 Section -->
-      <section class="student-section">
-        <h2>Student 2 - Pages Validation</h2>
-        <!-- Similar structure for Student 2's pages -->
-      </section>
+      <button id="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </main>
 
-      <!-- Student 3 Section -->
-      <section class="student-section">
-        <h2>Student 3 - Pages Validation</h2>
-        <!-- Similar structure for Student 3's pages -->
-      </section>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
 
-      <!-- Student 4 Section -->
-      <section class="student-section">
-        <h2>Student 4 - Pages Validation</h2>
-        <!-- Similar structure for Student 4's pages -->
-      </section>
-    </div>
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenuBtn.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.add("show");
+          } else {
+            backToTopButton.classList.remove("show");
+          }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>

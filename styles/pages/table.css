@@ -1,64 +1,296 @@
 .table-container {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 2rem;
+}
+
+.table-content {
+    background: var(--surface);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 1rem;
+}
+
+.table-title h1 {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.table-title p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.table-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.table-logo .logo-icon {
+    font-size: 2rem;
+}
+
+.table-logo .accent {
+    color: var(--accent);
 }
 
 .table-controls {
-    margin-bottom: 1rem;
     display: flex;
     gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
 }
 
 .table-controls input,
 .table-controls select {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text);
+    background-color: var(--background);
+    transition: all 0.3s ease;
 }
 
-.climate-table {
+.table-controls input {
+    padding-left: 2.5rem;
     width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.climate-table th,
-.climate-table td {
+.table-controls input:focus,
+.table-controls select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.2);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.water-initiatives-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--background);
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.water-initiatives-table th,
+.water-initiatives-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
 
-.climate-table th {
-    background-color: #2c3e50;
+.water-initiatives-table thead th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    position: relative;
+}
+
+.category-header {
+    background-color: var(--primary) !important;
+    color: white !important;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.header-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.header-with-icon i {
+    color: var(--primary);
+}
+
+/* Tooltip styles */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: var(--text);
     color: white;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.climate-table tr:nth-child(even) {
-    background-color: #f8f9fa;
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
-.climate-table tr:hover {
-    background-color: #f1f4f6;
+.water-initiatives-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.water-initiatives-table tbody tr:nth-child(even) {
+    background-color: var(--surface);
+}
+
+.water-initiatives-table tbody tr:hover {
+    background-color: rgba(8, 145, 178, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.high-priority {
+    border-left: 4px solid var(--accent);
+}
+
+.initiative-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.initiative-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.badge.infrastructure {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge.education {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.badge.conservation {
+    background-color: #f1f8e9;
+    color: #689f38;
+}
+
+.badge.technology {
+    background-color: #ede7f6;
+    color: #5e35b1;
 }
 
 .status {
+    display: inline-flex;
+    align-items: center;
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: 1rem;
     font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.status::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
 }
 
 .status.active {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: #28a745;
+}
+
+.status.active::before {
     background-color: #28a745;
-    color: white;
 }
 
 .status.pending {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+.status.pending::before {
     background-color: #ffc107;
-    color: #000;
+}
+
+.status.completed {
+    background-color: rgba(0, 123, 255, 0.15);
+    color: #007bff;
+}
+
+.status.completed::before {
+    background-color: #007bff;
+}
+
+.status.planning {
+    background-color: rgba(108, 117, 125, 0.15);
+    color: #6c757d;
+}
+
+.status.planning::before {
+    background-color: #6c757d;
 }
 
 .table-pagination {
@@ -66,29 +298,136 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
-.table-pagination button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #2c3e50;
-    color: white;
-    border-radius: 4px;
+.pagination-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
     cursor: pointer;
+    color: var(--text);
+    transition: all 0.2s ease;
 }
 
-.table-pagination button:hover {
-    background-color: #34495e;
+.pagination-btn:hover {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pagination-number {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.pagination-number:hover {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.pagination-number.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table-summary {
+    background-color: var(--surface);
+    border-top: 2px solid var(--primary-light);
+}
+
+.summary-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .table-logo {
+        align-self: flex-start;
+    }
 }
 
 @media (max-width: 768px) {
-    .climate-table {
-        display: block;
-        overflow-x: auto;
+    .table-container {
+        padding: 1rem;
+    }
+
+    .table-content {
+        padding: 1.5rem;
     }
 
     .table-controls {
         flex-direction: column;
+    }
+
+    .summary-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-container {
+        padding: 0.5rem;
+    }
+
+    .table-content {
+        padding: 1rem;
+    }
+
+    .header-with-icon span {
+        display: none;
+    }
+
+    .pagination-numbers {
+        display: none;
     }
 }

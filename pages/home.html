@@ -1,84 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG 13: Climate Action - Home</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/pages/home.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDG 6: Clean Water and Sanitation - Home</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/pages/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <header>
-        <!-- Navigation template will be included here -->
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="home.html" class="logo-link">
+              <i class="fas fa-water"></i>
+              <span class="logo-text">SDG <span class="accent">6</span></span>
+            </a>
+          </div>
+
+          <div class="nav-links">
+            <a href="home.html" class="nav-link active" aria-current="page">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="content_ST1.html" class="nav-link">
+              <i class="fas fa-tint"></i>
+              <span>Water Access</span>
+            </a>
+            <a href="content_ST2.html" class="nav-link">
+              <i class="fas fa-shower"></i>
+              <span>Sanitation</span>
+            </a>
+            <a href="content_ST3.html" class="nav-link">
+              <i class="fas fa-lightbulb"></i>
+              <span>Solutions</span>
+            </a>
+            <a href="content_ST4.html" class="nav-link">
+              <i class="fas fa-globe"></i>
+              <span>Future</span>
+            </a>
+          </div>
+
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <main class="home-container">
-        <section class="hero-section">
-            <div class="logo-container">
-                <img src="../assets/images/climate-action-logo.png" 
-                     alt="Climate Action Initiative Logo - Representing SDG 13" 
-                     class="logo">
+    <main id="main-content" class="home-container">
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-badge">Sustainable Development Goal 6</div>
+          <h1 class="hero-title">Clean Water Initiative</h1>
+          <p class="hero-text">
+            Ensuring availability and sustainable management of water and
+            sanitation for all through innovation, education, and community
+            engagement.
+          </p>
+          <div class="hero-cta">
+            <a href="#explore" class="cta-button primary">
+              Explore Solutions
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#stats" class="cta-button secondary">
+              Learn More
+              <i class="fas fa-info-circle"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img
+              src="https://pixabay.com/get/g81482b7dafcf0a976f0c728603a5f08684f602a2c52eda7f0e2a370442ffc63736a1496109826f3a98b6a504b66bc22f.jpg"
+              alt="Clean Water and Sanitation Initiative"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="stats-section">
+        <h2 class="section-title">Water Crisis in Numbers</h2>
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number" data-count="2">0</div>
+            <div class="stat-unit">billion</div>
+            <p class="stat-desc">People lack access to safe drinking water</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="3.6">0</div>
+            <div class="stat-unit">billion</div>
+            <p class="stat-desc">People lack safely managed sanitation</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="80">0</div>
+            <div class="stat-unit">percent</div>
+            <p class="stat-desc">Of wastewater flows back without treatment</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="297,000">0</div>
+            <div class="stat-unit">deaths</div>
+            <p class="stat-desc">
+              Children under 5 annually from diarrheal diseases
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="explore" class="content-links">
+        <h2 class="section-title">Explore Water & Sanitation</h2>
+        <div class="content-grid">
+          <a href="content_ST1.html" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Water Access Challenges"
+                loading="lazy"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-tint"></i>
+              </div>
             </div>
-            <div class="mission-statement">
-                <h1>Climate Action Initiative</h1>
-                <p class="sdg-label">SDG 13: Climate Action</p>
-                <p class="mission-text">
-                    Driving urgent action to combat climate change and its impacts through education, 
-                    innovation, and community engagement. Together, we're building resilient 
-                    communities and promoting sustainable practices for a cleaner, greener future.
-                </p>
+            <div class="card-content">
+              <div class="card-tag">Research & Data</div>
+              <h3>Water Access</h3>
+              <p>
+                Understanding global water challenges and innovative solutions
+                for communities worldwide
+              </p>
+              <span class="card-link">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </span>
             </div>
-        </section>
+          </a>
 
-        <section class="content-links">
-            <h2>Explore Climate Action</h2>
-            <div class="content-grid">
-                <a href="content_ST1.html" class="content-card">
-                    <div class="card-image">
-                        <img src="../assets/images/climate-impact.jpg" alt="Climate Impact and Solutions">
-                    </div>
-                    <div class="card-content">
-                        <h3>Climate Impact</h3>
-                        <p>Understanding climate change and its global effects</p>
-                    </div>
-                </a>
-
-                <a href="content_ST2.html" class="content-card">
-                    <div class="card-image">
-                        <img src="../assets/images/community-action.jpg" alt="Community Climate Initiatives">
-                    </div>
-                    <div class="card-content">
-                        <h3>Community Action</h3>
-                        <p>Local initiatives and sustainable practices</p>
-                    </div>
-                </a>
-
-                <a href="content_ST3.html" class="content-card">
-                    <div class="card-image">
-                        <img src="../assets/images/climate-solutions.jpg" alt="Climate Solutions">
-                    </div>
-                    <div class="card-content">
-                        <h3>Climate Solutions</h3>
-                        <p>Innovative approaches to climate challenges</p>
-                    </div>
-                </a>
-
-                <a href="content_ST4.html" class="content-card">
-                    <div class="card-image">
-                        <img src="../assets/images/future-vision.jpg" alt="Future Climate Vision">
-                    </div>
-                    <div class="card-content">
-                        <h3>Future Vision</h3>
-                        <p>Building a sustainable tomorrow</p>
-                    </div>
-                </a>
+          <a href="content_ST2.html" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Sanitation Solutions"
+                loading="lazy"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-shower"></i>
+              </div>
             </div>
-        </section>
+            <div class="card-content">
+              <div class="card-tag">Health & Hygiene</div>
+              <h3>Sanitation</h3>
+              <p>
+                Exploring sustainable sanitation methods and their impact on
+                public health
+              </p>
+              <span class="card-link">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="content_ST3.html" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Innovative Solutions"
+                loading="lazy"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-tag">Innovation</div>
+              <h3>Solutions</h3>
+              <p>
+                Discovering innovative technology for clean water purification
+                and distribution
+              </p>
+              <span class="card-link">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="content_ST4.html" class="content-card">
+            <div class="card-image">
+              <img
+                src="https://pixabay.com/get/gd4b58dee033fbb4318c09f132c4978f860775ab243174710ce897e7595f75753a1c114514520447c3d90fb53dfc45e2d.jpg"
+                alt="Future Outlook"
+                loading="lazy"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-globe"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-tag">Future Outlook</div>
+              <h3>Future</h3>
+              <p>
+                Exploring the future trends, policies and solutions for global
+                water security
+              </p>
+              <span class="card-link">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Join the Movement for Clean Water</h2>
+          <p>
+            Help us make a difference in communities worldwide through
+            education, innovation, and action.
+          </p>
+          <a href="volunteer.html" class="cta-button primary">Get Involved</a>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <!-- Footer template will be included here -->
-        <a href="pageEditor_ST2.html">Page Editor</a>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About SDG 6</h3>
+          <p>Working towards clean water and sanitation for all by 2030.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="pageEditor_ST2.html">Page Editor</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> contact@sdg6initiative.org</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 SDG 6 Initiative. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (mobileMenuBtn && navLinks) {
+          mobileMenuBtn.addEventListener("click", () => {
+            mobileMenuBtn.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+            // Update aria-expanded attribute
+            const isExpanded = mobileMenuBtn.classList.contains("active");
+            mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
+          });
+        }
+
+        // Animated counting for statistics
+        const statNumbers = document.querySelectorAll(".stat-number");
+
+        if (statNumbers.length > 0) {
+          const animateCountUp = (el) => {
+            const target = parseInt(el.getAttribute("data-count"));
+            const duration = 2000; // ms
+            const step = target / (duration / 16); // for 60fps
+            let current = 0;
+
+            const updateCount = () => {
+              current += step;
+              if (current < target) {
+                el.textContent = Math.floor(current).toLocaleString();
+                requestAnimationFrame(updateCount);
+              } else {
+                el.textContent = target.toLocaleString();
+              }
+            };
+
+            updateCount();
+          };
+
+          // Check if element is in viewport
+          const isInViewport = (el) => {
+            const rect = el.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+            );
+          };
+
+          // Start animation when element is in viewport
+          const handleScroll = () => {
+            statNumbers.forEach((statNumber) => {
+              if (
+                isInViewport(statNumber) &&
+                !statNumber.classList.contains("animated")
+              ) {
+                animateCountUp(statNumber);
+                statNumber.classList.add("animated");
+              }
+            });
+          };
+
+          // Listen for scroll events
+          window.addEventListener("scroll", handleScroll);
+
+          // Check on initial load
+          handleScroll();
+        }
+      });
+    </script>
+  </body>
 </html>
